@@ -1,0 +1,34 @@
+.badge,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  color: var(--color-gold-soft);
+  background: rgba(217, 183, 121, 0.08);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.badge.success {
+  color: var(--color-success);
+  border-color: rgba(159, 196, 135, 0.45);
+}
+
+.badge.warning {
+  color: var(--color-warning);
+  border-color: rgba(224, 180, 95, 0.55);
+}
+
+.badge.danger {
+  color: var(--color-danger-bright);
+  border-color: rgba(232, 102, 102, 0.55);
+}
+
+.badge.info {
+  color: var(--color-info);
+  border-color: rgba(134, 169, 201, 0.5);
+}
