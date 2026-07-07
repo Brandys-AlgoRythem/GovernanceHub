@@ -1,105 +1,189 @@
 # Governance Hub
 
-A local-first governance operations prototype for small businesses.
+## Overview
 
-Governance Hub is a static portfolio app that demonstrates how small businesses can organize obligations, evidence, risk, documentation, licenses, controls, expenses, and audit readiness from one executive dashboard.
+Governance Hub is a local-first governance operations prototype for small businesses.
 
-This project is intentionally built with vanilla HTML, CSS, and JavaScript so it can run directly on GitHub Pages without a build step, dependency lockfile, or the usual frontend goblin ceremony.
+It demonstrates how a small business can organize obligations, evidence, risk, controls, documents, licenses, expenses, vendors, and governance readiness from one executive dashboard.
 
-## Version 1 Scope
+The project is built as a static HTML, CSS, and JavaScript portfolio app so it can run on GitHub Pages without a backend, authentication, database, or build step.
 
-Version 1 includes:
+## Purpose
 
-- Landing Page
-- Executive Dashboard
-- Business Profile
-- Obligations Tracker
-- Governance Vault
-- Licenses & Permits
-- Risk Register
-- Controls / SOP Library
-- Evidence Tracker
-- Business Expenses
-- Governance Intelligence Roadmap
+The purpose of Governance Hub is to show how governance work can be structured before a business grows into chaos, which is apparently where humanity keeps putting important records.
 
-Optional modules such as Audit Center and Third-Party Risk are documented in the roadmap but intentionally excluded from the required Version 1 build.
+This prototype focuses on:
 
-## Portfolio Purpose
+- Executive visibility
+- Compliance operations
+- Risk and control mapping
+- Evidence tracking
+- Document readiness
+- Business process modeling
+- Local-first product thinking
 
-This repository is a portfolio demonstration of governance, risk, compliance, operations, and documentation architecture. It is not legal advice, financial advice, or a production compliance system.
+## Why This Project Exists
 
-The mock company shown in the interface is `SyNERDgy LLC`. All business details, obligations, vendors, controls, risks, expenses, and records are sample data created for demonstration.
+Small businesses often manage governance through scattered files, memory, text threads, inbox searches, and spreadsheets that became haunted sometime around row 438.
 
-## Design Direction
+Governance Hub models a cleaner operating system:
 
-The visual system uses a dark executive command-center style with cream and gold accents, honeycomb navigation motifs, and governance-focused UI patterns.
+1. Capture the business foundation.
+2. Track obligations and renewal dates.
+3. Store governance documents.
+4. Map evidence to requirements.
+5. Track risks and controls.
+6. Give leaders an executive summary.
 
-Core design traits:
+## Core Features
 
-- Dark gold hive aesthetic
-- Sidebar and header app shell
-- Executive dashboard cards
-- Hex-based governance health visualization
-- Modular governance pages
-- Static mock data files
-- GitHub Pages-ready structure
+- Public landing page
+- Executive dashboard
+- Shared sidebar and header shell
+- Governance health hive visual
+- Business profile page
+- Obligations tracker
+- Governance vault
+- Licenses and permits tracker
+- Risk register
+- Controls / SOP library
+- Evidence tracker
+- Business expenses tracker
+- Governance intelligence roadmap
+- Static mock JSON data model
+- GitHub Pages deployment workflow
 
-## Project Structure
+## Portfolio Scope
+
+This is a portfolio prototype, not a production compliance platform.
+
+It is designed to show product thinking, governance structure, GRC workflow design, interface planning, and frontend execution.
+
+It does not provide legal advice, financial advice, tax advice, or real compliance management.
+
+## Current Version
+
+Current version: **Version 1 Static Portfolio Build**
+
+Version 1 includes all required core pages and static mock content. Status badges and charts are static. Version 2 is planned to calculate statuses, metrics, and relationships from JSON.
+
+## Architecture
+
+The app uses a vanilla static structure:
 
 ```txt
 GovernanceHub/
 ├── index.html
-├── README.md
 ├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── ROADMAP.md
-│   ├── SCREENSHOTS.md
-│   └── PORTFOLIO_NOTES.md
 ├── assets/
-│   ├── icons/
-│   ├── images/
-│   └── screenshots/
 ├── data/
-│   ├── business.json
-│   ├── obligations.json
-│   ├── risks.json
-│   ├── documents.json
-│   ├── evidence.json
-│   ├── expenses.json
-│   ├── controls.json
-│   ├── vendors.json
-│   └── activity.json
 ├── pages/
-│   ├── dashboard.html
-│   ├── business-profile.html
-│   ├── obligations.html
-│   ├── vault.html
-│   ├── licenses.html
-│   ├── risks.html
-│   ├── controls.html
-│   ├── evidence.html
-│   ├── expenses.html
-│   └── roadmap.html
 ├── scripts/
-│   ├── app.js
-│   ├── navigation.js
-│   ├── metrics.js
-│   ├── filters.js
-│   ├── charts.js
-│   └── relationships.js
 └── styles/
-    ├── tokens.css
-    ├── base.css
-    ├── layout.css
-    ├── hive.css
-    ├── cards.css
-    ├── tables.css
-    ├── badges.css
-    ├── pages.css
-    └── responsive.css
 ```
 
-## Running Locally
+The design system is split into CSS files:
+
+- `tokens.css` for colors, typography, spacing, and design variables
+- `base.css` for global defaults
+- `layout.css` for shell, sidebar, header, and grids
+- `hive.css` for the governance hive visual
+- `cards.css` for panels and metrics
+- `tables.css` for register tables
+- `badges.css` for status chips
+- `pages.css` for page-specific patterns and charts
+- `responsive.css` for mobile behavior
+
+## Mock Data Model
+
+Mock data lives in `/data`:
+
+- `business.json`
+- `obligations.json`
+- `documents.json`
+- `evidence.json`
+- `risks.json`
+- `controls.json`
+- `expenses.json`
+- `vendors.json`
+- `activity.json`
+
+The data is fake, but the structure is intentionally meaningful. Records include IDs, owners, dates, statuses, evidence links, document links, risk links, and notes so Version 2 can add lightweight logic without a backend.
+
+## Screenshots
+
+Screenshot guidance lives in `docs/SCREENSHOTS.md`.
+
+Recommended screenshots:
+
+- Landing page
+- Executive dashboard
+- Governance health hive
+- Business profile
+- Obligations tracker
+- Evidence tracker
+- Risk register
+- Business expenses chart
+- Governance intelligence roadmap
+
+Screenshot assets should be stored in `assets/screenshots/`.
+
+## Roadmap
+
+### Version 1: Static Portfolio
+
+Complete foundation with required pages, mock content, status badges, static dashboard, and CSS-only expense chart.
+
+### Version 2: Light Logic Demo
+
+Planned additions:
+
+- Calculated dashboard metrics from mock JSON
+- Due soon, overdue, completed status logic
+- Monthly and quarterly expense charts
+- Table filters by status and category
+- Search across documents, evidence, and obligations
+- Relationship highlighting between connected items
+- Optional local storage settings or notes
+- Print or export-ready mock report page
+
+### Governance Intelligence Future Scope
+
+Governance Intelligence is a future roadmap concept for local-first governance automation. Planned capabilities include document classification, SOP conflict detection, evidence gap review, obligation reminders, and executive-ready governance summaries.
+
+## Skills Demonstrated
+
+- GRC workflow design
+- Risk and control mapping
+- Audit readiness modeling
+- Compliance operations
+- Executive reporting
+- Business process modeling
+- Information architecture
+- Local-first product thinking
+- Frontend prototyping
+- Static deployment planning
+- Mock data modeling
+
+## Version 1 Acceptance Checklist
+
+- [x] Landing page exists
+- [x] Dashboard exists
+- [x] Sidebar works visually
+- [x] Header matches brand
+- [x] Hive visual exists
+- [x] 8+ pages exist
+- [x] Tables use realistic mock data
+- [x] Status badges are styled
+- [x] Expense page has static chart
+- [x] Roadmap page explains AI future scope
+- [x] README explains portfolio purpose
+- [x] No broken navigation links identified in required pages
+- [x] CSS files are linked from required pages
+- [x] App is designed for desktop
+- [x] Screenshots folder/doc exists
+
+## How to Run
 
 Open `index.html` in a browser, or run a local static server:
 
@@ -115,33 +199,18 @@ http://localhost:8000
 
 ## GitHub Pages
 
-This project includes a GitHub Actions workflow at `.github/workflows/pages.yml` to publish the static site from the repository root.
+The repository includes a GitHub Actions workflow at `.github/workflows/pages.yml` to publish the static site from the repository root.
 
-If deploying manually through repository settings, set GitHub Pages to use GitHub Actions or the root of the `main` branch.
+If deploying manually, configure GitHub Pages to use GitHub Actions.
 
-## Key Screens
+## Important Boundary
 
-- `index.html` - public portfolio landing page
-- `pages/dashboard.html` - executive dashboard and governance health hive
-- `pages/business-profile.html` - entity foundation and roles
-- `pages/obligations.html` - statutory and operational deadline tracking
-- `pages/vault.html` - governance records inventory
-- `pages/licenses.html` - permits, licenses, renewals, and owners
-- `pages/risks.html` - operational and compliance risk register
-- `pages/controls.html` - control and SOP library
-- `pages/evidence.html` - proof, artifacts, and audit support
-- `pages/expenses.html` - business expense tracking
-- `pages/roadmap.html` - governance intelligence roadmap
+Governance Hub should feel like:
 
-## Status
+> This could become a real governance platform.
 
-Version 1 static build: complete foundation.
+It should not claim:
 
-Next recommended improvements:
+> This already manages compliance.
 
-- Add real screenshots to `assets/screenshots/`
-- Add optional Audit Center page
-- Add optional Third-Party Risk page
-- Add lightweight client-side charts
-- Add exported governance snapshot mockup
-- Add accessibility review notes
+We do not lie. We present the prototype cleanly.
