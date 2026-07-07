@@ -2,27 +2,25 @@
 
 ## Problem
 
-Small businesses often manage governance through scattered documents, inbox searches, text threads, memory, and spreadsheets that become fragile as soon as the business has more than one obligation, one owner, or one renewal date.
+Small businesses often manage governance through scattered documents, inbox searches, text threads, memory, and spreadsheets.
 
-That creates avoidable operational risk. Records can be misplaced, renewal proof can go stale, ownership can become unclear, and audit readiness can depend on someone remembering where a file was saved.
+That creates operational risk. Records can be misplaced, renewal proof can go stale, ownership can become unclear, and audit readiness can depend on one person remembering where everything lives.
 
-Governance Hub explores how those moving pieces can be organized into one local-first operations prototype.
+Governance Hub organizes those moving pieces into one local-first business GRC workspace.
 
 ## Product Hypothesis
 
-A lightweight governance dashboard can help small businesses understand what exists, what is due, what proof is missing, and which risks need attention without requiring a full enterprise GRC platform.
+A lightweight business GRC workspace can help small businesses understand what exists, what is due, what proof is missing, and which risks need attention without requiring a full enterprise platform.
 
-The prototype tests whether static pages, mock JSON data, calculated metrics, and simple filters can communicate a credible governance operating model.
+The app uses sample data and local dummy inputs so a reviewer can see how the system works without accounts, private data, paid APIs, or a backend.
 
 ## Target User
 
 The target user is a small business owner, operator, compliance coordinator, or governance-focused consultant supporting a small organization.
 
-The intended business size is roughly 1 to 15 employees. At that size, the organization may not need enterprise software, but it still needs records, ownership, deadlines, controls, evidence, and risk visibility.
+The intended business size is roughly 1 to 15 employees. At that size, the organization may not need enterprise software, but it still needs records, ownership, deadlines, controls, evidence, vendors, expenses, and risk visibility.
 
 ## GRC Concepts Modeled
-
-Governance Hub models the following concepts:
 
 - Business identity and entity records
 - Ownership and role mapping
@@ -33,6 +31,8 @@ Governance Hub models the following concepts:
 - Risk register design
 - Control and SOP mapping
 - Expense support records
+- Vendor and dependency awareness
+- Continuity review
 - Executive reporting
 - Future governance intelligence roadmap
 
@@ -40,7 +40,7 @@ Governance Hub models the following concepts:
 
 The app separates the governance operating model into focused pages:
 
-- Landing Page
+- Landing Page and Workspace Setup
 - Executive Dashboard
 - Business Profile
 - Obligations Tracker
@@ -52,43 +52,32 @@ The app separates the governance operating model into focused pages:
 - Business Expenses
 - Governance Intelligence Roadmap
 
-This structure allows a reviewer to see both the product surface and the operational logic underneath it.
+## Working Workspace Behavior
+
+The landing page includes a workspace setup form.
+
+A reviewer can enter dummy business details, save them locally in the browser, and see those values reflected in the dashboard.
+
+This gives the app a working feel while keeping the data safe, local, and sample-based.
 
 ## Data Model
 
 The data model lives in `/data` as local JSON files.
 
-Core files include:
+Core files include business, obligations, documents, evidence, risks, controls, expenses, vendors, licenses, and activity data.
 
-- `business.json`
-- `obligations.json`
-- `documents.json`
-- `evidence.json`
-- `risks.json`
-- `controls.json`
-- `expenses.json`
-- `vendors.json`
-- `licenses.json`
-- `activity.json`
+Records use IDs and relationship fields so the workspace can model how governance items connect. Obligations can link to evidence, documents, and risks. Controls can map to obligations and risks. Expenses can link to evidence. Licenses can link to proof records.
 
-Records use IDs and relationship fields so the prototype can model how governance items connect. Obligations can link to evidence, documents, and risks. Controls can map to obligations and risks. Expenses can link to evidence. Licenses can link to proof records.
+## Build Logic
 
-## Version 1 Build
+The build uses static HTML, CSS, JavaScript, local JSON, and browser storage.
 
-Version 1 focused on portfolio foundation.
+Current features include:
 
-The goal was to create the full app shell and demonstrate scope without introducing backend complexity. Version 1 included the landing page, sidebar navigation, dashboard shell, internal tracker pages, mock data, status badges, roadmap documentation, and GitHub Pages deployment workflow.
-
-This stage proved the product concept and visual identity.
-
-## Version 2 Logic
-
-Version 2 adds lightweight behavior without changing the static deployment model.
-
-Current Version 2 features include:
-
+- Local workspace setup form
+- Browser-saved dummy business values
 - Local JSON loader
-- Stable demo date logic
+- Stable due-date logic
 - Calculated dashboard metrics
 - Dynamic dashboard deadline rendering
 - JSON-backed tables
@@ -102,25 +91,23 @@ Current Version 2 features include:
 - Validation GitHub Action
 - Screenshot-free README strategy
 
-The goal is not to create production software. The goal is to show that the prototype has real product logic and that the data model can support future workflows.
-
 ## Tradeoffs
 
 Governance Hub intentionally avoids backend systems, authentication, databases, paid APIs, and complex build tooling.
 
-That keeps the project easy to inspect, easy to deploy, and easy to explain in a portfolio review. The tradeoff is that the app does not persist edits or manage real compliance data.
+That keeps the app easy to inspect, easy to deploy, and easy to explain in a portfolio review. The tradeoff is that it does not persist full records beyond the local dummy workspace values.
 
-This is acceptable because the project is framed as a portfolio prototype, not a production compliance platform.
+This is acceptable because the project is designed as a working portfolio app with sample data, not as a production compliance platform.
 
 ## Future Roadmap
 
 Future work could include:
 
 - Relationship highlighting between linked records
+- Full editable local records
 - Dashboard activity feed polish
 - Export-ready report view
 - Local storage notes
-- Editable mock records
 - Print-friendly audit snapshot
 - Optional visual gallery
 - README diagram polish
@@ -130,8 +117,6 @@ Future work could include:
 - Local-first governance assistant concept
 
 ## Skills Demonstrated
-
-Governance Hub demonstrates:
 
 - GRC workflow design
 - Compliance operations modeling
@@ -145,9 +130,10 @@ Governance Hub demonstrates:
 - Static deployment planning
 - Lightweight JavaScript logic
 - Validation and quality gate thinking
+- Local-first product thinking
 
 ## Portfolio Framing
 
 Governance Hub should be reviewed as a product-thinking and GRC-operations artifact.
 
-It shows how a small business governance system could be organized, how its records could relate, and how a future operational platform could grow from a static local-first prototype.
+It shows how a small business governance system could be organized, how its records could relate, how a user could enter sample workspace details, and how a future operational platform could grow from a local-first build.
