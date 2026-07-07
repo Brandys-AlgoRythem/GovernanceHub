@@ -10,6 +10,20 @@ navLinks.forEach((link) => {
   }
 });
 
+function polishHiveChrome() {
+  document.querySelectorAll('.brand-mark small').forEach((node) => {
+    node.textContent = 'Corporate Hive Workspace';
+  });
+  document.querySelectorAll('.header-copy span').forEach((node) => {
+    if (node.textContent.trim() === 'Welcome back, King.') node.textContent = 'Hive Operations';
+  });
+  document.querySelectorAll('.profile-hex').forEach((node) => {
+    if (node.textContent.trim() === 'B') node.textContent = 'GH';
+  });
+}
+
+polishHiveChrome();
+
 function scriptPath(fileName) {
   return window.location.pathname.includes('/pages/') ? `../scripts/${fileName}` : `scripts/${fileName}`;
 }
