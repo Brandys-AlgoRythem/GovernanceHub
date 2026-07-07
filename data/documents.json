@@ -13,14 +13,14 @@
   },
   {
     "id": "DOC-002",
-    "title": "EIN Letter",
+    "title": "Tax ID Letter",
     "category": "Tax Records",
     "owner": "Finance",
     "status": "Stored",
     "version": "Original",
     "reviewDate": "Annual Check",
     "linkedObligations": ["OBL-003"],
-    "linkedEvidence": [],
+    "linkedEvidence": ["EVD-007"],
     "storageLocation": "Vault / Tax"
   },
   {
