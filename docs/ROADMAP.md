@@ -1,32 +1,46 @@
-# Governance Hub Roadmap
+# Roadmap
 
-## Version 1: Static Hive Portfolio
+Governance Hub evolves through iterative sprints. This roadmap outlines the planned versions and features.
 
-Goal: Create a polished static governance prototype with strong visual identity, clear navigation, and realistic GRC content.
+## Version 1: Static hive portfolio (completed)
 
-Planned pages:
+Goal: Create a polished static governance prototype with a strong visual identity, clear navigation, and realistic GRC content.
 
-- Landing page
-- Executive Dashboard
-- Business Profile
-- Obligations Tracker
-- Governance Vault
-- Business Expenses
-- Governance Intelligence Roadmap
+Delivered:
 
-## Version 2: Light Logic Demo
+- Landing page, executive dashboard, business profile, obligations tracker, governance vault, risk register, controls library, evidence tracker, business expenses, and roadmap pages.
+- Honeycomb design system with reusable components.
+- Responsive layout and dark aesthetic.
+- Static mock tables and cards.
 
-Goal: Add lightweight JavaScript and mock JSON data.
+## Version 2: Light logic demo (in progress)
+
+Goal: Add lightweight JavaScript and mock JSON data to breathe life into the static pages.
 
 Planned features:
 
-- Calculated dashboard metrics
-- Due date status logic
-- Table filters
-- Basic search
-- Monthly and quarterly expense summaries
-- Relationship highlighting across obligations, evidence, documents, risks, and controls
+- Load data from local JSON files and render tables for obligations, risks, controls, evidence and expenses.
+- Compute due-date statuses (overdue, due soon, on track) from `dueDate` fields.
+- Aggregate dashboard metrics (total obligations, upcoming deadlines, open risks, evidence coverage, expense totals).
+- Implement simple table filters and free text search.
+- Calculate monthly and quarterly expense summaries.
+- Add simple charts (CSS/SVG or Chart.js) to visualise spending trends.
+- Highlight relationships: hovering an obligation highlights linked evidence, documents, risks and controls.
+- Export print‑ready report summarising governance health.
 
-## Hard scope boundary
+## Version 3: Future intelligence (conceptual)
 
-Do not add authentication, real uploads, payment systems, databases, external APIs, or production AI features during the portfolio build.
+Goal: Explore local governance intelligence without committing to backend infrastructure.
+
+Aspirational capabilities:
+
+- SOP conflict detection and gap analysis.
+- Local LLM to summarise governance status and suggest next actions.
+- Policy document classification and tagging.
+- Evidence gap detection and automated reminders.
+- Vendor risk scoring and integration with expense data.
+
+## Hard scope boundaries
+
+- Do not add authentication, real file uploads, payment systems, databases, external APIs or production AI features during the portfolio build.
+- Keep all data local and anonymised.
