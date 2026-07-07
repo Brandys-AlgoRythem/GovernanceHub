@@ -36,6 +36,7 @@ const requiredFiles = [
   'styles/pages.css',
   'styles/responsive.css',
   'scripts/navigation.js',
+  'scripts/workspace.js',
   'scripts/data.js',
   'scripts/dates.js',
   'scripts/metrics.js',
