@@ -5,32 +5,68 @@ function setYear() {
   });
 }
 
-function setMetric(selector, value, prefix = '', suffix = '') {
-  const node = document.querySelector(selector);
-  if (node) node.textContent = `${prefix}${value}${suffix}`;
+function formatMetricValue(key, value) {
+  if (key === 'healthScore' || key.endsWith('Score')) return `${value}%`;
+  if (key === 'monthlyExpenses' || key === 'quarterlyExpenses') return `$${Math.round(value).toLocaleString()}`;
+  return value;
 }
 
 function updateDashboardMetricCards(metrics) {
-  const cards = document.querySelectorAll('.metric-card');
-  if (!cards.length) return;
-
-  const values = [
-    metrics.upcomingDeadlines,
-    metrics.overdueObligations,
-    metrics.highRisks,
-    metrics.totalDocuments,
-    metrics.healthScore,
-    metrics.openRisks,
-    metrics.verifiedEvidence,
-    Math.round(metrics.quarterlyExpenses)
-  ];
-
-  cards.forEach((card, index) => {
+  document.querySelectorAll('[data-metric]').forEach((card) => {
+    const key = card.dataset.metric;
     const strong = card.querySelector('strong');
-    if (!strong || values[index] === undefined) return;
-    const value = index === 4 ? `${values[index]}%` : index === 7 ? `$${values[index].toLocaleString()}` : values[index];
-    strong.textContent = value;
+    if (!key || !strong || metrics[key] === undefined) return;
+    strong.textContent = formatMetricValue(key, metrics[key]);
   });
+}
+
+function dashboardBadgeClass(status) {
+  const value = String(status || '').toLowerCase();
+  if (['completed', 'verified', 'on track', 'active'].includes(value)) return 'success';
+  if (['due soon', 'pending review', 'needs review', 'in progress'].includes(value)) return 'warning';
+  if (['overdue', 'missing', 'expired', 'open'].includes(value)) return 'danger';
+  return 'info';
+}
+
+function formatDate(value) {
+  const date = window.GovernanceDates.parseDate(value);
+  if (!date) return value || 'Needs Review';
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function renderDashboardDeadlines(obligations) {
+  const body = document.querySelector('[data-dashboard-deadlines]');
+  if (!body || !window.GovernanceDates) return;
+
+  const rows = obligations
+    .map((item) => ({
+      ...item,
+      computedStatus: window.GovernanceDates.getDueStatus(item.dueDate, item.status === 'Completed'),
+      parsedDate: window.GovernanceDates.parseDate(item.dueDate)
+    }))
+    .filter((item) => item.computedStatus !== 'Completed' && item.parsedDate)
+    .sort((a, b) => a.parsedDate - b.parsedDate)
+    .slice(0, 5);
+
+  body.innerHTML = rows.map((item) => `
+    <tr>
+      <td><strong>${item.title}</strong></td>
+      <td>${formatDate(item.dueDate)}</td>
+      <td><span class="badge ${dashboardBadgeClass(item.computedStatus)}">${item.computedStatus}</span></td>
+    </tr>
+  `).join('');
+}
+
+function updateDashboardHealth(metrics) {
+  document.querySelectorAll('[data-health-score]').forEach((node) => {
+    node.textContent = `${metrics.healthScore}%`;
+  });
+
+  const evidenceNode = document.querySelector('[data-hive-evidence]');
+  if (evidenceNode) evidenceNode.textContent = `${metrics.evidenceScore}%`;
+
+  const riskNode = document.querySelector('[data-hive-risks]');
+  if (riskNode) riskNode.textContent = `${metrics.openRisks} Open`;
 }
 
 async function initializeGovernanceHub() {
@@ -44,7 +80,8 @@ async function initializeGovernanceHub() {
     if (window.GovernanceMetrics && window.location.pathname.endsWith('dashboard.html')) {
       const metrics = window.GovernanceMetrics.calculateDashboardMetrics(data);
       updateDashboardMetricCards(metrics);
-      setMetric('[data-health-score]', metrics.healthScore, '', '%');
+      updateDashboardHealth(metrics);
+      renderDashboardDeadlines(data.obligations || []);
     }
 
     if (window.GovernanceTables) {
@@ -58,5 +95,6 @@ async function initializeGovernanceHub() {
 
 window.GovernanceApp = {
   initializeGovernanceHub,
-  updateDashboardMetricCards
+  updateDashboardMetricCards,
+  renderDashboardDeadlines
 };
