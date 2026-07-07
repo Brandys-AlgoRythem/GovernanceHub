@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Dashboard | Governance Hub</title>
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles/base.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+  <link rel="stylesheet" href="../styles/hive.css" />
+  <link rel="stylesheet" href="../styles/cards.css" />
+  <link rel="stylesheet" href="../styles/tables.css" />
+  <link rel="stylesheet" href="../styles/badges.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+  <link rel="stylesheet" href="../styles/responsive.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand-mark" href="../index.html"><span class="brand-hex">GH</span><span><strong>Governance Hub</strong><small>SyNERDgy LLC</small></span></a>
+        <nav class="sidebar-nav" aria-label="App navigation">
+          <a data-nav href="dashboard.html">Dashboard</a>
+          <a data-nav href="business-profile.html">Business Profile</a>
+          <a data-nav href="obligations.html">Obligations</a>
+          <a data-nav href="vault.html">Governance Vault</a>
+          <a data-nav href="licenses.html">Licenses & Permits</a>
+          <a data-nav href="risks.html">Risk Register</a>
+          <a data-nav href="controls.html">Controls / SOPs</a>
+          <a data-nav href="evidence.html">Evidence Tracker</a>
+          <a data-nav href="expenses.html">Expenses</a>
+          <a data-nav href="roadmap.html">Roadmap</a>
+        </nav>
+        <div class="sidebar-footer">Static V1 prototype. Mock data only. Built for portfolio review.</div>
+      </div>
+    </aside>
+    <div class="main-panel">
+      <header class="app-header">
+        <div class="header-copy"><span>Welcome back, King.</span><strong>SyNERDgy LLC Governance Command</strong></div>
+        <div class="header-actions"><button class="icon-button" aria-label="Notifications">!</button><span class="profile-hex">B</span></div>
+      </header>
+      <main class="page-content">
+        <section class="page-heading">
+          <div><p class="eyebrow">Executive Dashboard</p><h1>Governance overview</h1><p>One place to review deadlines, evidence, open risks, documentation, and continuity signals.</p></div>
+          <span class="badge success">Demo Healthy</span>
+        </section>
+
+        <section class="metric-grid">
+          <article class="metric-card"><span>Upcoming Deadlines</span><strong>3</strong><small>Next 90 days</small></article>
+          <article class="metric-card"><span>Action Items</span><strong>2</strong><small>Owner follow-up</small></article>
+          <article class="metric-card"><span>Continuity Risk</span><strong>1</strong><small>Needs review</small></article>
+          <article class="metric-card"><span>Documents</span><strong>24</strong><small>Vault records</small></article>
+          <article class="metric-card"><span>Evidence Coverage</span><strong>81%</strong><small>Mapped proofs</small></article>
+          <article class="metric-card"><span>Open Risks</span><strong>4</strong><small>Register items</small></article>
+          <article class="metric-card"><span>Controls</span><strong>6</strong><small>Active or draft</small></article>
+          <article class="metric-card"><span>Expenses</span><strong>$138</strong><small>Current sample month</small></article>
+        </section>
+
+        <section class="card-grid two">
+          <article class="panel-card">
+            <div class="card-header"><h2>Governance Health Hive</h2><span class="badge success">81%</span></div>
+            <div class="hive-map">
+              <div class="hive-node"><span>Compliance</span><small>Healthy</small></div>
+              <div class="hive-node"><span>Documents</span><small>Stored</small></div>
+              <div class="hive-node"><span>Ownership</span><small>Mapped</small></div>
+              <div class="hive-node"><span>Continuity</span><small>Review</small></div>
+              <div class="hive-node core"><span>Hive Core</span><small>Executive View</small></div>
+              <div class="hive-node"><span>Dependencies</span><small>Review</small></div>
+              <div class="hive-node"><span>Events</span><small>Scheduled</small></div>
+              <div class="hive-node"><span>Evidence</span><small>81%</small></div>
+              <div class="hive-node"><span>Risk</span><small>4 Open</small></div>
+            </div>
+          </article>
+
+          <article class="panel-card alert-card">
+            <div class="card-header"><h2>Continuity Alert</h2><span class="badge warning">Review</span></div>
+            <p>Key records are stored, but backup ownership and vendor renewal documentation need a second owner review.</p>
+            <div class="quick-actions">
+              <a href="business-profile.html">Review ownership map <span>→</span></a>
+              <a href="vault.html">Check missing records <span>→</span></a>
+              <a href="risks.html">Open risk register <span>→</span></a>
+            </div>
+          </article>
+        </section>
+
+        <section class="card-grid two">
+          <article class="table-card">
+            <div class="card-header"><h2>Upcoming Deadlines</h2><a href="obligations.html">View all</a></div>
+            <table class="data-table">
+              <thead><tr><th>Obligation</th><th>Due</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Registered Agent Review</strong></td><td>Aug 15, 2026</td><td><span class="badge danger">Open</span></td></tr>
+                <tr><td><strong>Insurance Renewal Review</strong></td><td>Sep 1, 2026</td><td><span class="badge warning">Review</span></td></tr>
+                <tr><td><strong>Quarterly Expense Reconciliation</strong></td><td>Sep 30, 2026</td><td><span class="badge warning">In Progress</span></td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="panel-card">
+            <div class="card-header"><h2>Recent Activity</h2><span class="badge info">Static</span></div>
+            <ul class="stack-list">
+              <li><span>Governance Hub V1 structure created</span><strong>Today</strong></li>
+              <li><span>Expense tracker added to roadmap</span><strong>Yesterday</strong></li>
+              <li><span>Evidence coverage reviewed</span><strong>This week</strong></li>
+              <li><span>Business records inventory updated</span><strong>This week</strong></li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="../scripts/navigation.js"></script>
+  <script src="../scripts/app.js"></script>
+</body>
+</html>
