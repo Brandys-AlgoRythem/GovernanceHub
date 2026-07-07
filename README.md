@@ -6,17 +6,19 @@ The project demonstrates how obligations, evidence, risk, documentation, expense
 
 ## Current sprint
 
-Sprint 1 establishes the repository foundation.
+Sprint 1B adds the first visual-system pass on top of the Sprint 1 static foundation.
 
 Completed scope:
 
-- Working branch: `print1`
-- Static HTML/CSS architecture
-- GitHub Pages-compatible entry point
-- Foundational folder structure
-- Starter landing page
-- Starter dashboard and core page scaffolds
-- Architecture, roadmap, and screenshot documentation
+- Working branch: `print1b`
+- Honeycomb interface CSS
+- Reusable card styles
+- Status badge styles
+- Static table styles
+- Responsive layout refinements
+- Polished landing page
+- Polished executive dashboard
+- Static mock tables for obligations, vault, expenses, roadmap, and business profile
 
 ## Current stack
 
