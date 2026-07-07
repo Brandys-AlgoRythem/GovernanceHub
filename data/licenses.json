@@ -7,7 +7,7 @@
     "owner": "Governance",
     "expirationDate": "2027-06-30",
     "renewalStatus": "Active",
-    "evidence": "EVD-001",
+    "linkedEvidence": ["EVD-001"],
     "notes": "Entity filing current."
   },
   {
@@ -18,7 +18,7 @@
     "owner": "Operations",
     "expirationDate": "2026-08-20",
     "renewalStatus": "Renewal Soon",
-    "evidence": "EVD-002",
+    "linkedEvidence": ["EVD-002"],
     "notes": "Confirm local requirement and store renewal proof."
   },
   {
@@ -29,7 +29,7 @@
     "owner": "Finance",
     "expirationDate": "2026-09-01",
     "renewalStatus": "Pending Proof",
-    "evidence": "EVD-004",
+    "linkedEvidence": ["EVD-004"],
     "notes": "Store final proof after renewal."
   },
   {
@@ -40,18 +40,18 @@
     "owner": "Governance",
     "expirationDate": "2026-09-10",
     "renewalStatus": "Renewal Soon",
-    "evidence": "Application Record",
+    "linkedEvidence": [],
     "notes": "Mock entry for portfolio demo."
   },
   {
     "id": "LIC-005",
-    "license": "Sales Tax Permit Check",
+    "license": "Permit Applicability Check",
     "jurisdiction": "State",
-    "licenseNumber": "STP-0000",
+    "licenseNumber": "PERMIT-0000",
     "owner": "Finance",
     "expirationDate": "Review Required",
     "renewalStatus": "Expired",
-    "evidence": "Missing",
+    "linkedEvidence": [],
     "notes": "Needs applicability review."
   },
   {
@@ -62,7 +62,7 @@
     "owner": "Operations",
     "expirationDate": "2027-07-05",
     "renewalStatus": "Active",
-    "evidence": "EXP-005",
+    "linkedEvidence": ["EXP-005"],
     "notes": "Tracked as operational dependency."
   }
 ]
