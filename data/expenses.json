@@ -1,0 +1,32 @@
+[
+  {
+    "id": "EXP-001",
+    "date": "2026-01-14",
+    "vendor": "GitHub",
+    "category": "Software",
+    "amount": 12,
+    "status": "Verified",
+    "linkedEvidence": "Receipt batch",
+    "quarter": "Q1"
+  },
+  {
+    "id": "EXP-002",
+    "date": "2026-02-02",
+    "vendor": "Insurance Carrier",
+    "category": "Insurance",
+    "amount": 640,
+    "status": "Stored",
+    "linkedEvidence": "Certificate",
+    "quarter": "Q1"
+  },
+  {
+    "id": "EXP-003",
+    "date": "2026-03-19",
+    "vendor": "Office Depot",
+    "category": "Office",
+    "amount": 210,
+    "status": "Review",
+    "linkedEvidence": "Receipt needed",
+    "quarter": "Q1"
+  }
+]
