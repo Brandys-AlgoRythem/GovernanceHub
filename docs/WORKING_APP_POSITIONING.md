@@ -7,8 +7,8 @@ It is not just a static demo page.
 A reviewer can:
 
 1. Open the landing page.
-2. Enter dummy business information.
-3. Save the sample workspace in the browser.
+2. Enter a sample business profile.
+3. Save the starter workspace in the browser.
 4. Open the dashboard.
 5. Review obligations, documents, licenses, risks, controls, evidence, expenses, and roadmap items.
 
