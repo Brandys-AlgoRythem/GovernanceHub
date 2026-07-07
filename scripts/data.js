@@ -13,7 +13,7 @@ const GovernanceData = {
   },
   async loadAll() {
     const base = this.basePath();
-    const [business, obligations, documents, evidence, risks, controls, expenses, vendors, activity] = await Promise.all([
+    const [business, obligations, documents, evidence, risks, controls, expenses, vendors, licenses, activity] = await Promise.all([
       loadJSON(`${base}business.json`),
       loadJSON(`${base}obligations.json`),
       loadJSON(`${base}documents.json`),
@@ -22,10 +22,11 @@ const GovernanceData = {
       loadJSON(`${base}controls.json`),
       loadJSON(`${base}expenses.json`),
       loadJSON(`${base}vendors.json`),
+      loadJSON(`${base}licenses.json`),
       loadJSON(`${base}activity.json`)
     ]);
 
-    return { business, obligations, documents, evidence, risks, controls, expenses, vendors, activity };
+    return { business, obligations, documents, evidence, risks, controls, expenses, vendors, licenses, activity };
   }
 };
 
