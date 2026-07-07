@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Articles of Organization",
+    "type": "Formation Record",
+    "owner": "Governance",
+    "location": "Governance Vault",
+    "status": "Stored"
+  },
+  {
+    "title": "Operating Agreement",
+    "type": "Entity Record",
+    "owner": "Governance",
+    "location": "Governance Vault",
+    "status": "Stored"
+  },
+  {
+    "title": "EIN Confirmation Letter",
+    "type": "Tax Record",
+    "owner": "Finance",
+    "location": "Governance Vault",
+    "status": "Stored"
+  },
+  {
+    "title": "Insurance Declaration Page",
+    "type": "Continuity Record",
+    "owner": "Finance",
+    "location": "Pending Upload",
+    "status": "Needed"
+  },
+  {
+    "title": "Expense Policy",
+    "type": "SOP",
+    "owner": "Operations",
+    "location": "Controls Library",
+    "status": "Draft"
+  }
+]
