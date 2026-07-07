@@ -1,6 +1,6 @@
 # Governance Hub GRC Operating Model
 
-Governance Hub is a local-first business GRC workspace built with sample data so a reviewer can enter dummy business information, open the workspace, and see how the system would organize governance work.
+Governance Hub is a local-first business GRC workspace built with sample data so a reviewer can enter a starter business profile, open the workspace, and see how the system would organize governance work.
 
 It is designed as a portfolio implementation inspired by a full governance application, not as a flat demo page.
 
@@ -218,9 +218,9 @@ Current location:
 
 ## Workspace Behavior
 
-The landing page allows a reviewer to enter dummy business information and save it locally in the browser.
+The landing page allows a reviewer to enter sample business information and save it locally in the browser.
 
-That sample workspace data can be reflected inside the app so the experience feels like a working business GRC workspace rather than a static showcase.
+That starter profile data can be reflected inside the app so the experience feels like a working business GRC workspace rather than a static showcase.
 
 ## Portfolio Positioning
 
