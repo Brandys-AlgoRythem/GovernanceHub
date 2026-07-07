@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-07-01",
+    "vendor": "Kentucky Secretary of State",
+    "category": "State Filing",
+    "amount": 15.00,
+    "receipt": "Stored",
+    "businessPurpose": "Annual report filing"
+  },
+  {
+    "date": "2026-07-03",
+    "vendor": "Office Supply Vendor",
+    "category": "Operations",
+    "amount": 42.18,
+    "receipt": "Stored",
+    "businessPurpose": "Records binder materials"
+  },
+  {
+    "date": "2026-07-05",
+    "vendor": "Domain Registrar",
+    "category": "Technology",
+    "amount": 18.99,
+    "receipt": "Needed",
+    "businessPurpose": "Portfolio domain planning"
+  },
+  {
+    "date": "2026-07-06",
+    "vendor": "Printing Service",
+    "category": "Documentation",
+    "amount": 61.40,
+    "receipt": "Stored",
+    "businessPurpose": "Governance records packet"
+  }
+]
