@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="../styles/tokens.css">
   <link rel="stylesheet" href="../styles/base.css">
   <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/cards.css">
+  <link rel="stylesheet" href="../styles/badges.css">
+  <link rel="stylesheet" href="../styles/tables.css">
+  <link rel="stylesheet" href="../styles/hive.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
   <div class="app-shell">
@@ -28,12 +33,58 @@
           <h1>Hive health overview</h1>
           <p>Snapshot of governance health, deadlines, documents, evidence, and risk readiness for the portfolio prototype.</p>
         </div>
+        <span class="badge badge-gold">Portfolio V1B</span>
       </header>
       <section class="card-grid" aria-label="Governance metrics">
         <article class="metric-card"><strong>92%</strong><span>Governance health</span></article>
         <article class="metric-card"><strong>3</strong><span>Upcoming deadlines</span></article>
         <article class="metric-card"><strong>24</strong><span>Documents tracked</span></article>
         <article class="metric-card"><strong>4</strong><span>Open risks</span></article>
+      </section>
+      <section class="two-column-grid section-stack">
+        <article class="surface-card">
+          <h2>Governance hive map</h2>
+          <p>Each chamber represents a governance operating area. In Version 2, these chambers will reflect mock data states.</p>
+          <div class="hive-grid" aria-label="Governance hive chambers">
+            <a class="hex hex-core" href="dashboard.html"><span>Hive Core</span><small>Executive view</small></a>
+            <a class="hex hex-success" href="business-profile.html"><span>Entity</span><small>Active</small></a>
+            <a class="hex hex-warning" href="obligations.html"><span>Obligations</span><small>3 due soon</small></a>
+            <a class="hex hex-success" href="vault.html"><span>Vault</span><small>18 verified</small></a>
+            <a class="hex hex-warning" href="expenses.html"><span>Expenses</span><small>receipts review</small></a>
+            <a class="hex" href="roadmap.html"><span>Roadmap</span><small>future logic</small></a>
+            <a class="hex" href="obligations.html"><span>Controls</span><small>planned</small></a>
+            <a class="hex hex-danger" href="vault.html"><span>Evidence</span><small>2 missing</small></a>
+            <a class="hex" href="expenses.html"><span>Vendors</span><small>tracked</small></a>
+          </div>
+        </article>
+        <aside class="surface-card">
+          <h2>Executive pulse</h2>
+          <ul class="stat-list">
+            <li><span>Annual report</span><strong>Due soon</strong></li>
+            <li><span>Receipt evidence</span><strong>92%</strong></li>
+            <li><span>Risk register</span><strong>4 open</strong></li>
+            <li><span>Vault readiness</span><strong>75%</strong></li>
+          </ul>
+          <div class="action-row">
+            <a class="button button-primary" href="obligations.html">Review obligations</a>
+            <a class="button button-secondary" href="vault.html">Open vault</a>
+          </div>
+        </aside>
+      </section>
+      <section class="section-stack">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Upcoming governance activity</caption>
+            <thead>
+              <tr><th>Item</th><th>Owner</th><th>Status</th><th>Linked chamber</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Annual Report</strong></td><td>Compliance Officer</td><td><span class="badge badge-warning">Due soon</span></td><td>Obligations</td></tr>
+              <tr><td><strong>Insurance Certificate</strong></td><td>Operations</td><td><span class="badge badge-success">Verified</span></td><td>Vault</td></tr>
+              <tr><td><strong>Receipt Batch</strong></td><td>Finance</td><td><span class="badge badge-warning">Review</span></td><td>Expenses</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   </div>
