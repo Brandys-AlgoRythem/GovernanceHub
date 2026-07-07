@@ -1,30 +1,86 @@
 [
   {
-    "artifact": "Annual Report Filing Confirmation",
-    "supports": "Kentucky Annual Report",
+    "id": "EVD-001",
+    "title": "Annual Report Filing Receipt",
+    "supports": ["OBL-001"],
+    "evidenceType": "Filing Receipt",
     "owner": "Governance",
-    "coverage": "Complete",
-    "status": "Stored"
+    "collectedDate": "2026-06-30",
+    "expirationDate": "2027-06-30",
+    "status": "Verified",
+    "linkedDocument": "DOC-003",
+    "linkedRisks": ["RISK-002"]
   },
   {
-    "artifact": "Operating Agreement Copy",
-    "supports": "Ownership and Roles",
-    "owner": "Governance",
-    "coverage": "Complete",
-    "status": "Stored"
-  },
-  {
-    "artifact": "Insurance Declaration",
-    "supports": "Continuity Planning",
-    "owner": "Finance",
-    "coverage": "Partial",
-    "status": "Needed"
-  },
-  {
-    "artifact": "Expense Reconciliation Summary",
-    "supports": "Quarterly Expense Review",
+    "id": "EVD-002",
+    "title": "Business License Renewal Confirmation",
+    "supports": ["OBL-002"],
+    "evidenceType": "Renewal Confirmation",
     "owner": "Operations",
-    "coverage": "Partial",
-    "status": "In Progress"
+    "collectedDate": "Pending",
+    "expirationDate": "2026-08-20",
+    "status": "Pending Review",
+    "linkedDocument": "DOC-004",
+    "linkedRisks": ["RISK-004"]
+  },
+  {
+    "id": "EVD-003",
+    "title": "Operating Agreement PDF",
+    "supports": ["OBL-006"],
+    "evidenceType": "Governance Record",
+    "owner": "Executive",
+    "collectedDate": "2026-07-01",
+    "expirationDate": "2026-10-01",
+    "status": "Verified",
+    "linkedDocument": "DOC-001",
+    "linkedRisks": ["RISK-001"]
+  },
+  {
+    "id": "EVD-004",
+    "title": "Insurance Certificate",
+    "supports": ["OBL-005"],
+    "evidenceType": "Certificate",
+    "owner": "Finance",
+    "collectedDate": "Pending",
+    "expirationDate": "2026-09-01",
+    "status": "Missing",
+    "linkedDocument": "DOC-005",
+    "linkedRisks": ["RISK-005"]
+  },
+  {
+    "id": "EVD-005",
+    "title": "Vendor Agreement",
+    "supports": ["Vendor Review"],
+    "evidenceType": "Agreement",
+    "owner": "Governance",
+    "collectedDate": "2026-05-12",
+    "expirationDate": "2027-05-12",
+    "status": "Pending Review",
+    "linkedDocument": "DOC-007",
+    "linkedRisks": ["RISK-003"]
+  },
+  {
+    "id": "EVD-006",
+    "title": "Expense Receipt Batch",
+    "supports": ["OBL-004"],
+    "evidenceType": "Finance Evidence",
+    "owner": "Finance",
+    "collectedDate": "2026-04-01",
+    "expirationDate": "2026-06-30",
+    "status": "Expired",
+    "linkedDocument": "Expense Register",
+    "linkedRisks": []
+  },
+  {
+    "id": "EVD-010",
+    "title": "GitHub Invoice",
+    "supports": ["EXP-001"],
+    "evidenceType": "Expense Proof",
+    "owner": "Finance",
+    "collectedDate": "2026-01-14",
+    "expirationDate": "2027-01-14",
+    "status": "Verified",
+    "linkedDocument": "Expense Register",
+    "linkedRisks": []
   }
 ]
