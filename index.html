@@ -35,9 +35,9 @@
         <p class="eyebrow">Interactive Business GRC Workspace</p>
         <h1>Governance Hub</h1>
         <p class="hero-lede">A local-first governance command center for business records, obligations, evidence, risk, controls, vendors, expenses, and audit readiness.</p>
-        <p class="hero-support">Use the starter sample data or enter dummy business details below, then move through the workspace like a real operating system for small-business GRC.</p>
+        <p class="hero-support">Use the starter company profile or enter sample business details below, then move through the workspace like a corporate operating system for small-business GRC.</p>
         <div class="button-row">
-          <a class="button button-primary" href="#start">Enter Dummy Info</a>
+          <a class="button button-primary" href="#start">Enter Sample Profile</a>
           <a class="button button-secondary" href="pages/dashboard.html">Open Dashboard</a>
           <a class="button button-ghost" href="#menu">Browse Menu</a>
         </div>
@@ -45,10 +45,10 @@
       <aside class="hero-panel" aria-label="Governance overview card">
         <div class="panel-header"><span>Workspace Snapshot</span><span class="status-dot"></span></div>
         <div class="metric-grid compact">
-          <article class="metric-card"><span>Business</span><strong data-workspace-value="businessName">SyNERDgy LLC</strong></article>
-          <article class="metric-card"><span>Primary Focus</span><strong data-workspace-value="primaryConcern">Evidence readiness</strong></article>
+          <article class="metric-card"><span>Business</span><strong data-workspace-value="businessName">Northstar Business Group</strong></article>
+          <article class="metric-card"><span>Primary Focus</span><strong data-workspace-value="primaryConcern">Audit readiness</strong></article>
           <article class="metric-card"><span>Review Cadence</span><strong data-workspace-value="operatingCadence">Monthly review</strong></article>
-          <article class="metric-card"><span>Status</span><strong data-workspace-status>Using starter sample</strong></article>
+          <article class="metric-card"><span>Status</span><strong data-workspace-status>Using starter profile</strong></article>
         </div>
         <div class="mini-hive" aria-label="Governance health hive preview">
           <span>Compliance</span><span>Evidence</span><span>Risk</span><span>Vault</span><span>Controls</span>
@@ -59,7 +59,7 @@
     <section class="content-section split-section" id="start">
       <div>
         <p class="eyebrow">Start Here</p>
-        <h2>Fill dummy business info and open the workspace.</h2>
+        <h2>Enter a sample business profile and open the workspace.</h2>
         <p>This is the hands-on entry point. Add sample business details, save them locally in your browser, then use the menu to review the governance system from dashboard to evidence.</p>
       </div>
       <article class="scope-card">
@@ -69,12 +69,12 @@
             <div class="form-field"><label for="businessName">Business Name</label><input id="businessName" name="businessName" data-workspace-input="businessName" /></div>
             <div class="form-field"><label for="entityType">Entity Type</label><input id="entityType" name="entityType" data-workspace-input="entityType" /></div>
             <div class="form-field"><label for="state">State</label><input id="state" name="state" data-workspace-input="state" /></div>
-            <div class="form-field"><label for="ownerName">Owner / Lead</label><input id="ownerName" name="ownerName" data-workspace-input="ownerName" /></div>
-            <div class="form-field"><label for="primaryConcern">Primary GRC Focus</label><select id="primaryConcern" name="primaryConcern" data-workspace-input="primaryConcern"><option>Evidence readiness</option><option>Renewal tracking</option><option>Risk visibility</option><option>Vendor dependency</option><option>Audit preparation</option></select></div>
+            <div class="form-field"><label for="ownerName">Workspace Owner</label><input id="ownerName" name="ownerName" data-workspace-input="ownerName" /></div>
+            <div class="form-field"><label for="primaryConcern">Primary GRC Focus</label><select id="primaryConcern" name="primaryConcern" data-workspace-input="primaryConcern"><option>Audit readiness</option><option>Evidence readiness</option><option>Renewal tracking</option><option>Risk visibility</option><option>Vendor dependency</option></select></div>
             <div class="form-field"><label for="operatingCadence">Review Cadence</label><select id="operatingCadence" name="operatingCadence" data-workspace-input="operatingCadence"><option>Weekly review</option><option>Monthly review</option><option>Quarterly review</option><option>Annual review</option></select></div>
           </div>
-          <div class="button-row"><button class="button button-primary" type="submit">Save Sample Workspace</button><button class="button button-secondary" type="button" data-workspace-reset>Reset Sample</button></div>
-          <p class="workspace-status">Status: <span data-workspace-status>Using starter sample</span></p>
+          <div class="button-row"><button class="button button-primary" type="submit">Save Sample Profile</button><button class="button button-secondary" type="button" data-workspace-reset>Reset Profile</button></div>
+          <p class="workspace-status">Status: <span data-workspace-status>Using starter profile</span></p>
         </form>
       </article>
     </section>
