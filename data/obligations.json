@@ -1,0 +1,52 @@
+[
+  {
+    "id": "OBL-001",
+    "obligation": "Annual State Report",
+    "category": "Corporate",
+    "frequency": "Annual",
+    "owner": "Compliance",
+    "status": "Due soon",
+    "evidence": "Filing receipt",
+    "dueDate": "2026-06-30"
+  },
+  {
+    "id": "OBL-002",
+    "obligation": "Business License Renewal",
+    "category": "Licensing",
+    "frequency": "Annual",
+    "owner": "Operations",
+    "status": "On track",
+    "evidence": "Renewal proof",
+    "dueDate": "2026-12-31"
+  },
+  {
+    "id": "OBL-003",
+    "obligation": "Quarterly Estimated Tax",
+    "category": "Finance",
+    "frequency": "Quarterly",
+    "owner": "Finance",
+    "status": "Review",
+    "evidence": "Payment record",
+    "dueDate": "2026-09-30"
+  },
+  {
+    "id": "OBL-004",
+    "obligation": "Insurance Renewal",
+    "category": "Continuity",
+    "frequency": "Annual",
+    "owner": "Operations",
+    "status": "On track",
+    "evidence": "Certificate",
+    "dueDate": "2026-11-30"
+  },
+  {
+    "id": "OBL-005",
+    "obligation": "Operating Agreement Review",
+    "category": "Governance",
+    "frequency": "Annual",
+    "owner": "Owner",
+    "status": "Planned",
+    "evidence": "Signed copy",
+    "dueDate": "2026-12-15"
+  }
+]
