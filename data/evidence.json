@@ -1,0 +1,30 @@
+[
+  {
+    "artifact": "Annual Report Filing Confirmation",
+    "supports": "Kentucky Annual Report",
+    "owner": "Governance",
+    "coverage": "Complete",
+    "status": "Stored"
+  },
+  {
+    "artifact": "Operating Agreement Copy",
+    "supports": "Ownership and Roles",
+    "owner": "Governance",
+    "coverage": "Complete",
+    "status": "Stored"
+  },
+  {
+    "artifact": "Insurance Declaration",
+    "supports": "Continuity Planning",
+    "owner": "Finance",
+    "coverage": "Partial",
+    "status": "Needed"
+  },
+  {
+    "artifact": "Expense Reconciliation Summary",
+    "supports": "Quarterly Expense Review",
+    "owner": "Operations",
+    "coverage": "Partial",
+    "status": "In Progress"
+  }
+]
