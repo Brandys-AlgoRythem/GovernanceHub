@@ -40,7 +40,8 @@ const requiredFiles = [
   'scripts/dates.js',
   'scripts/metrics.js',
   'scripts/tables.js',
-  'scripts/app.js'
+  'scripts/app.js',
+  'scripts/activity.js'
 ];
 
 const jsonFiles = [
@@ -72,7 +73,7 @@ function loadJSON(name) {
     return JSON.parse(read(relativePath));
   } catch (error) {
     errors.push(`Could not parse ${relativePath}: ${error.message}`);
-    return Array.isArray(name) ? [] : null;
+    return [];
   }
 }
 
@@ -164,7 +165,7 @@ validateLinks(data.risks, ['linkedControls', 'linkedObligations', 'linkedEvidenc
 validateLinks(data.controls, ['linkedEvidence', 'mappedRisk', 'mappedObligation'], idMap, 'control');
 validateLinks(data.expenses, ['linkedEvidence'], idMap, 'expense');
 validateLinks(data.vendors, ['linkedExpenses', 'linkedRisks'], idMap, 'vendor');
-validateLinks(data.licenses, ['evidence'], idMap, 'license');
+validateLinks(data.licenses, ['linkedEvidence'], idMap, 'license');
 
 const pages = requiredFiles.filter((file) => file.endsWith('.html'));
 pages.forEach((page) => {
