@@ -1,8 +1,8 @@
 {
   "id": "BUS-001",
-  "entityName": "Northstar Business Group",
-  "entityType": "Limited Liability Company",
-  "state": "Delaware",
+  "entityName": "Corporate Hive",
+  "entityType": "Governance Workspace",
+  "state": "Operating Region",
   "formationStatus": "Active",
   "registeredAgent": "Corporate Services Team",
   "operatingAgreement": "DOC-001",
@@ -11,17 +11,17 @@
   "locations": [
     {
       "id": "LOC-001",
-      "type": "Principal Office",
-      "city": "Wilmington",
-      "state": "DE",
+      "type": "Primary Workspace",
+      "city": "Corporate Hive",
+      "state": "Operating Region",
       "status": "Current"
     }
   ],
   "owners": [
     {
       "id": "OWN-001",
-      "name": "Operations Lead",
-      "role": "Governance Owner",
+      "name": "Governance Team",
+      "role": "Workspace Owner",
       "governanceArea": "Operations, records, compliance workflow",
       "linkedControls": ["CTRL-001", "CTRL-004"]
     },
@@ -36,13 +36,13 @@
   "contacts": [
     {
       "id": "CON-001",
-      "name": "Registered Agent Contact",
+      "name": "Corporate Services Contact",
       "owner": "Corporate Services Team",
       "status": "Active"
     },
     {
       "id": "CON-002",
-      "name": "Business Banking Contact",
+      "name": "Finance Operations Contact",
       "owner": "Finance Operations",
       "status": "Pending"
     }
