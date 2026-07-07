@@ -1,0 +1,68 @@
+[
+  {
+    "id": "LIC-001",
+    "license": "Kentucky Business Entity",
+    "jurisdiction": "Kentucky",
+    "licenseNumber": "KY-LLC-2026",
+    "owner": "Governance",
+    "expirationDate": "2027-06-30",
+    "renewalStatus": "Active",
+    "evidence": "EVD-001",
+    "notes": "Entity filing current."
+  },
+  {
+    "id": "LIC-002",
+    "license": "Local Business License",
+    "jurisdiction": "Local",
+    "licenseNumber": "LOC-1008",
+    "owner": "Operations",
+    "expirationDate": "2026-08-20",
+    "renewalStatus": "Renewal Soon",
+    "evidence": "EVD-002",
+    "notes": "Confirm local requirement and store renewal proof."
+  },
+  {
+    "id": "LIC-003",
+    "license": "Insurance Certificate",
+    "jurisdiction": "Business",
+    "licenseNumber": "INS-8821",
+    "owner": "Finance",
+    "expirationDate": "2026-09-01",
+    "renewalStatus": "Pending Proof",
+    "evidence": "EVD-004",
+    "notes": "Store final proof after renewal."
+  },
+  {
+    "id": "LIC-004",
+    "license": "Professional Services Registration",
+    "jurisdiction": "State",
+    "licenseNumber": "PSR-4510",
+    "owner": "Governance",
+    "expirationDate": "2026-09-10",
+    "renewalStatus": "Renewal Soon",
+    "evidence": "Application Record",
+    "notes": "Mock entry for portfolio demo."
+  },
+  {
+    "id": "LIC-005",
+    "license": "Sales Tax Permit Check",
+    "jurisdiction": "State",
+    "licenseNumber": "STP-0000",
+    "owner": "Finance",
+    "expirationDate": "Review Required",
+    "renewalStatus": "Expired",
+    "evidence": "Missing",
+    "notes": "Needs applicability review."
+  },
+  {
+    "id": "LIC-006",
+    "license": "Domain Registration",
+    "jurisdiction": "Technology",
+    "licenseNumber": "DOM-2027",
+    "owner": "Operations",
+    "expirationDate": "2027-07-05",
+    "renewalStatus": "Active",
+    "evidence": "EXP-005",
+    "notes": "Tracked as operational dependency."
+  }
+]
