@@ -1,34 +1,34 @@
 {
   "id": "BUS-001",
-  "entityName": "SyNERDgy LLC",
+  "entityName": "Northstar Business Group",
   "entityType": "Limited Liability Company",
-  "state": "Kentucky",
+  "state": "Delaware",
   "formationStatus": "Active",
-  "registeredAgent": "Brandy",
+  "registeredAgent": "Corporate Services Team",
   "operatingAgreement": "DOC-001",
-  "einConfirmation": "DOC-002",
+  "registrationConfirmation": "DOC-002",
   "primaryDashboard": "pages/dashboard.html",
   "locations": [
     {
       "id": "LOC-001",
       "type": "Principal Office",
-      "city": "Lexington",
-      "state": "KY",
+      "city": "Wilmington",
+      "state": "DE",
       "status": "Current"
     }
   ],
   "owners": [
     {
       "id": "OWN-001",
-      "name": "Brandy",
-      "role": "Founder / COO",
+      "name": "Operations Lead",
+      "role": "Governance Owner",
       "governanceArea": "Operations, records, compliance workflow",
       "linkedControls": ["CTRL-001", "CTRL-004"]
     },
     {
       "id": "OWN-002",
-      "name": "Nate",
-      "role": "Managing Member",
+      "name": "Executive Sponsor",
+      "role": "Continuity Owner",
       "governanceArea": "Executive approval and continuity",
       "linkedControls": ["CTRL-002", "CTRL-005"]
     }
@@ -36,14 +36,14 @@
   "contacts": [
     {
       "id": "CON-001",
-      "name": "Registered Agent",
-      "owner": "Brandy",
+      "name": "Registered Agent Contact",
+      "owner": "Corporate Services Team",
       "status": "Active"
     },
     {
       "id": "CON-002",
       "name": "Business Banking Contact",
-      "owner": "Operations",
+      "owner": "Finance Operations",
       "status": "Pending"
     }
   ],
