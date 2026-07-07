@@ -94,5 +94,65 @@
     "status": "Verified",
     "linkedDocument": "Expense Register",
     "linkedRisks": []
+  },
+  {
+    "id": "EVD-011",
+    "title": "Legal Template Vendor Receipt",
+    "supports": ["EXP-002"],
+    "evidenceType": "Expense Proof",
+    "owner": "Finance",
+    "collectedDate": "2026-02-02",
+    "expirationDate": "2027-02-02",
+    "status": "Pending Review",
+    "linkedDocument": "Expense Register",
+    "linkedRisks": []
+  },
+  {
+    "id": "EVD-012",
+    "title": "Office Supply Receipt",
+    "supports": ["EXP-004"],
+    "evidenceType": "Expense Proof",
+    "owner": "Finance",
+    "collectedDate": "2026-04-05",
+    "expirationDate": "2027-04-05",
+    "status": "Verified",
+    "linkedDocument": "Expense Register",
+    "linkedRisks": []
+  },
+  {
+    "id": "EVD-013",
+    "title": "Marketing Design Tool Receipt",
+    "supports": ["EXP-005"],
+    "evidenceType": "Expense Proof",
+    "owner": "Finance",
+    "collectedDate": "2026-04-12",
+    "expirationDate": "2027-04-12",
+    "status": "Verified",
+    "linkedDocument": "Expense Register",
+    "linkedRisks": []
+  },
+  {
+    "id": "EVD-014",
+    "title": "Tax Prep Support Receipt",
+    "supports": ["EXP-006"],
+    "evidenceType": "Expense Proof",
+    "owner": "Finance",
+    "collectedDate": "2026-04-18",
+    "expirationDate": "2027-04-18",
+    "status": "Pending Review",
+    "linkedDocument": "Expense Register",
+    "linkedRisks": []
+  },
+  {
+    "id": "EVD-015",
+    "title": "Professional Services Receipt",
+    "supports": ["EXP-007"],
+    "evidenceType": "Expense Proof",
+    "owner": "Finance",
+    "collectedDate": "2026-04-22",
+    "expirationDate": "2027-04-22",
+    "status": "Verified",
+    "linkedDocument": "Expense Register",
+    "linkedRisks": []
   }
 ]
