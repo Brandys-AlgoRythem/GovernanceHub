@@ -1,0 +1,56 @@
+[
+  {
+    "id": "CTRL-001",
+    "control": "Quarterly document review",
+    "owner": "Compliance",
+    "frequency": "Quarterly",
+    "evidenceRequired": "Review log",
+    "mappedRisk": "Evidence gaps",
+    "status": "Review"
+  },
+  {
+    "id": "CTRL-002",
+    "control": "Annual operating agreement review",
+    "owner": "Owner",
+    "frequency": "Annual",
+    "evidenceRequired": "Signed copy",
+    "mappedRisk": "Governance gaps",
+    "status": "Planned"
+  },
+  {
+    "id": "CTRL-003",
+    "control": "Vendor contract review",
+    "owner": "Operations",
+    "frequency": "Annual",
+    "evidenceRequired": "Contract template",
+    "mappedRisk": "Vendor risk",
+    "status": "Active"
+  },
+  {
+    "id": "CTRL-004",
+    "control": "License renewal verification",
+    "owner": "Operations",
+    "frequency": "Annual",
+    "evidenceRequired": "Renewal proof",
+    "mappedRisk": "Continuity",
+    "status": "Active"
+  },
+  {
+    "id": "CTRL-005",
+    "control": "Backup signer assignment",
+    "owner": "Compliance",
+    "frequency": "Annual",
+    "evidenceRequired": "Signed resolution",
+    "mappedRisk": "Operational risk",
+    "status": "Open"
+  },
+  {
+    "id": "CTRL-006",
+    "control": "Expense receipt retention",
+    "owner": "Finance",
+    "frequency": "Ongoing",
+    "evidenceRequired": "Receipt batch",
+    "mappedRisk": "Evidence gaps",
+    "status": "Review"
+  }
+]
