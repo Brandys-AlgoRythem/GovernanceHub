@@ -18,7 +18,7 @@
   <div class="app-shell">
     <aside class="sidebar">
       <div class="sidebar-inner">
-        <a class="brand-mark" href="../index.html"><span class="brand-hex">GH</span><span><strong>Governance Hub</strong><small>SyNERDgy LLC</small></span></a>
+        <a class="brand-mark" href="../index.html"><span class="brand-hex">GH</span><span><strong>Governance Hub</strong><small>Business GRC Workspace</small></span></a>
         <nav class="sidebar-nav" aria-label="App navigation">
           <a data-nav href="dashboard.html">Dashboard</a>
           <a data-nav href="business-profile.html">Business Profile</a>
@@ -31,22 +31,24 @@
           <a data-nav href="expenses.html">Expenses</a>
           <a data-nav href="roadmap.html">Roadmap</a>
         </nav>
-        <div class="sidebar-footer">V2 light-logic demo. Mock data only. Built for portfolio review.</div>
+        <div class="sidebar-footer">Local-first workspace using sample business data and browser-saved dummy inputs.</div>
       </div>
     </aside>
     <div class="main-panel">
       <header class="app-header">
-        <div class="header-copy"><span>Welcome back, King.</span><strong>SyNERDgy LLC Governance Command</strong></div>
+        <div class="header-copy"><span>Welcome back, King.</span><strong><span data-workspace-value="businessName">SyNERDgy LLC</span> Governance Command</strong></div>
         <div class="header-actions"><button class="icon-button" aria-label="Notifications">!</button><span class="profile-hex">B</span></div>
       </header>
       <main class="page-content">
         <section class="page-heading">
-          <div><p class="eyebrow">Executive Dashboard</p><h1>Governance overview</h1><p>One place to review deadlines, evidence, open risks, documentation, and continuity signals.</p></div>
-          <span class="badge success">Demo Healthy</span>
+          <div><p class="eyebrow">Executive Dashboard</p><h1>Governance overview</h1><p>One place to review deadlines, evidence, open risks, documentation, expenses, ownership, and continuity signals for <span data-workspace-value="businessName">SyNERDgy LLC</span>.</p></div>
+          <span class="badge success" data-workspace-status>Using starter sample</span>
         </section>
 
         <section class="metric-grid">
-          <article class="metric-card" data-metric="upcomingDeadlines"><span>Upcoming Deadlines</span><strong>0</strong><small>Next 30 demo days</small></article>
+          <article class="metric-card"><span>Business</span><strong data-workspace-value="businessName">SyNERDgy LLC</strong><small data-workspace-value="entityType">Limited Liability Company</small></article>
+          <article class="metric-card"><span>Primary Focus</span><strong data-workspace-value="primaryConcern">Evidence readiness</strong><small data-workspace-value="operatingCadence">Monthly review</small></article>
+          <article class="metric-card" data-metric="upcomingDeadlines"><span>Upcoming Deadlines</span><strong>0</strong><small>Next 30 sample days</small></article>
           <article class="metric-card" data-metric="overdueObligations"><span>Overdue Obligations</span><strong>0</strong><small>Needs owner action</small></article>
           <article class="metric-card" data-metric="highRisks"><span>High Risks</span><strong>0</strong><small>Inherent risk level</small></article>
           <article class="metric-card" data-metric="totalDocuments"><span>Documents</span><strong>0</strong><small>Vault records</small></article>
@@ -88,23 +90,20 @@
             <div class="card-header"><h2>Upcoming Deadlines</h2><a href="obligations.html">View all</a></div>
             <table class="data-table">
               <thead><tr><th>Obligation</th><th>Due</th><th>Status</th></tr></thead>
-              <tbody data-dashboard-deadlines>
-                <tr><td><strong>Loading obligations</strong></td><td>Demo data</td><td><span class="badge info">Loading</span></td></tr>
-              </tbody>
+              <tbody data-dashboard-deadlines><tr><td><strong>Loading obligations</strong></td><td>Sample data</td><td><span class="badge info">Loading</span></td></tr></tbody>
             </table>
           </article>
 
           <article class="panel-card">
             <div class="card-header"><h2>Recent Activity</h2><span class="badge info">JSON</span></div>
-            <ul class="stack-list" data-recent-activity>
-              <li><span>Loading recent activity</span><strong>Demo data</strong></li>
-            </ul>
+            <ul class="stack-list" data-recent-activity><li><span>Loading recent activity</span><strong>Sample data</strong></li></ul>
           </article>
         </section>
       </main>
     </div>
   </div>
   <script src="../scripts/navigation.js"></script>
+  <script src="../scripts/workspace.js"></script>
   <script src="../scripts/activity.js"></script>
 </body>
 </html>
