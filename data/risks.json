@@ -1,0 +1,34 @@
+[
+  {
+    "risk": "Single-person records dependency",
+    "area": "Continuity",
+    "level": "High",
+    "owner": "Operations",
+    "mitigation": "Create shared index and backup owner notes",
+    "status": "Open"
+  },
+  {
+    "risk": "Missing vendor contract inventory",
+    "area": "Vendor Management",
+    "level": "Medium",
+    "owner": "Governance",
+    "mitigation": "Capture vendor records and renewal dates",
+    "status": "Review"
+  },
+  {
+    "risk": "Evidence not linked to obligations",
+    "area": "Audit Readiness",
+    "level": "Medium",
+    "owner": "Compliance",
+    "mitigation": "Map proof artifacts to required filings and controls",
+    "status": "In Progress"
+  },
+  {
+    "risk": "Insurance documentation incomplete",
+    "area": "Continuity",
+    "level": "Medium",
+    "owner": "Finance",
+    "mitigation": "Store declarations and renewal confirmation",
+    "status": "Open"
+  }
+]
