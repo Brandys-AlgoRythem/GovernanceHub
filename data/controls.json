@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Monthly Records Review",
+    "type": "Administrative Control",
+    "owner": "Operations",
+    "frequency": "Monthly",
+    "status": "Active",
+    "linkedEvidence": "Records review log"
+  },
+  {
+    "name": "Expense Receipt Capture",
+    "type": "Finance SOP",
+    "owner": "Finance",
+    "frequency": "Weekly",
+    "status": "Draft",
+    "linkedEvidence": "Receipt folder"
+  },
+  {
+    "name": "License Renewal Check",
+    "type": "Compliance Control",
+    "owner": "Governance",
+    "frequency": "Quarterly",
+    "status": "Active",
+    "linkedEvidence": "License inventory"
+  },
+  {
+    "name": "Backup Owner Review",
+    "type": "Continuity Control",
+    "owner": "Executive",
+    "frequency": "Quarterly",
+    "status": "Review",
+    "linkedEvidence": "Role map"
+  }
+]
