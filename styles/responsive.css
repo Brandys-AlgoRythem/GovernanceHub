@@ -1,0 +1,66 @@
+@media (max-width: 1000px) {
+  .hero-section,
+  .split-section,
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-line-soft);
+  }
+
+  .sidebar-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .module-grid,
+  .metric-grid,
+  .status-grid,
+  .license-grid,
+  .roadmap-grid,
+  .card-grid.three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .landing-nav,
+  .app-header,
+  .page-heading,
+  .site-footer,
+  .panel-header,
+  .card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .landing-nav nav,
+  .header-actions {
+    width: 100%;
+  }
+
+  .module-grid,
+  .metric-grid,
+  .metric-grid.compact,
+  .detail-grid,
+  .card-grid.two,
+  .card-grid.three,
+  .status-grid,
+  .license-grid,
+  .roadmap-grid,
+  .sidebar-nav,
+  .hive-map {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-list li {
+    grid-template-columns: 1fr;
+  }
+
+  .page-content {
+    padding: 1rem;
+  }
+}
