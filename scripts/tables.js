@@ -35,6 +35,23 @@ const tableConfigs = {
       ['storageLocation', 'Storage Location']
     ]
   },
+  licenses: {
+    label: 'Licenses',
+    dataKey: 'licenses',
+    categoryKey: 'jurisdiction',
+    statusKey: 'renewalStatus',
+    quickFilters: ['All', 'Active', 'Renewal Soon', 'Expired', 'Pending Proof'],
+    columns: [
+      ['license', 'License'],
+      ['jurisdiction', 'Jurisdiction'],
+      ['licenseNumber', 'License Number'],
+      ['owner', 'Owner'],
+      ['expirationDate', 'Expiration Date'],
+      ['renewalStatus', 'Renewal Status'],
+      ['evidence', 'Evidence'],
+      ['notes', 'Notes']
+    ]
+  },
   risks: {
     label: 'Risks',
     dataKey: 'risks',
@@ -141,13 +158,13 @@ function displayValue(value, key) {
 function badgeClass(status) {
   const value = normalize(status);
   if (['verified', 'completed', 'active', 'stored', 'on track', 'controlled', 'mitigated'].includes(value)) return 'success';
-  if (['due soon', 'pending review', 'needs review', 'draft', 'in progress', 'pending proof', 'medium'].includes(value)) return 'warning';
+  if (['due soon', 'renewal soon', 'pending review', 'needs review', 'draft', 'in progress', 'pending proof', 'medium'].includes(value)) return 'warning';
   if (['overdue', 'missing', 'expired', 'open', 'high'].includes(value)) return 'danger';
   return 'info';
 }
 
 function isStatusColumn(key) {
-  return ['status', 'computedStatus', 'receiptStatus', 'inherentRisk', 'residualRisk'].includes(key);
+  return ['status', 'computedStatus', 'receiptStatus', 'renewalStatus', 'inherentRisk', 'residualRisk'].includes(key);
 }
 
 function enrichRows(type, rows) {
@@ -235,6 +252,10 @@ function quickFilterMatch(type, row, filter) {
     return normalize(row.category) === filter;
   }
 
+  if (type === 'licenses') {
+    return normalize(row.renewalStatus) === filter;
+  }
+
   if (type === 'documents' || type === 'vendors' || type === 'controls') {
     return normalize(row.status) === filter;
   }
@@ -256,7 +277,7 @@ function renderTable(target, config, rows) {
             const value = displayValue(row[key], key);
             return isStatusColumn(key)
               ? `<td><span class="badge ${badgeClass(value)}">${value}</span></td>`
-              : `<td>${key === 'title' || key === 'name' || key === 'id' ? `<strong>${value}</strong>` : value}</td>`;
+              : `<td>${key === 'title' || key === 'name' || key === 'id' || key === 'license' ? `<strong>${value}</strong>` : value}</td>`;
           }).join('')}
         </tr>
       `).join('')}
@@ -329,6 +350,7 @@ function pageTableType() {
   const map = {
     'obligations.html': 'obligations',
     'vault.html': 'documents',
+    'licenses.html': 'licenses',
     'risks.html': 'risks',
     'evidence.html': 'evidence',
     'expenses.html': 'expenses',
