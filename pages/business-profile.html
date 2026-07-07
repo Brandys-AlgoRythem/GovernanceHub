@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="../styles/tokens.css">
   <link rel="stylesheet" href="../styles/base.css">
   <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/cards.css">
+  <link rel="stylesheet" href="../styles/badges.css">
+  <link rel="stylesheet" href="../styles/tables.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
   <div class="app-shell">
@@ -26,13 +30,46 @@
         <div>
           <p class="eyebrow">Business profile</p>
           <h1>Entity control center</h1>
-          <p>Static foundation page for entity details, ownership roles, registered agent data, locations, and critical governance records.</p>
+          <p>Entity foundation page for ownership roles, registered agent data, locations, critical records, and operational contacts.</p>
         </div>
+        <span class="badge badge-success">Foundation active</span>
       </header>
       <section class="card-grid">
         <article class="metric-card"><strong>Active</strong><span>Formation status</span></article>
         <article class="metric-card"><strong>LLC</strong><span>Entity type</span></article>
         <article class="metric-card"><strong>KY</strong><span>Jurisdiction</span></article>
+        <article class="metric-card"><strong>6</strong><span>Key records</span></article>
+      </section>
+      <section class="two-column-grid section-stack">
+        <article class="surface-card">
+          <h2>Entity summary</h2>
+          <ul class="stat-list">
+            <li><span>Legal name</span><strong>SyNERDgy LLC</strong></li>
+            <li><span>Entity type</span><strong>LLC</strong></li>
+            <li><span>Primary state</span><strong>Kentucky</strong></li>
+            <li><span>Registered agent</span><strong>Brandy</strong></li>
+          </ul>
+        </article>
+        <aside class="surface-card">
+          <h2>Foundation readiness</h2>
+          <p>This section shows the governance base before obligations, controls, evidence, and expenses connect into the hive.</p>
+          <span class="badge badge-success">Ready</span>
+        </aside>
+      </section>
+      <section class="section-stack">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Critical business records</caption>
+            <thead>
+              <tr><th>Record</th><th>Category</th><th>Status</th><th>Storage</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Articles / Formation Record</strong></td><td>Corporate</td><td><span class="badge badge-success">Stored</span></td><td>Governance Vault</td></tr>
+              <tr><td><strong>EIN Confirmation</strong></td><td>Tax</td><td><span class="badge badge-success">Stored</span></td><td>Governance Vault</td></tr>
+              <tr><td><strong>Operating Agreement</strong></td><td>Governance</td><td><span class="badge badge-warning">Review</span></td><td>Governance Vault</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   </div>
