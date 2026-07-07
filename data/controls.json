@@ -1,34 +1,74 @@
 [
   {
-    "name": "Monthly Records Review",
-    "type": "Administrative Control",
+    "id": "CTRL-001",
+    "name": "Quarterly document review",
+    "controlType": "Administrative",
     "owner": "Operations",
-    "frequency": "Monthly",
+    "frequency": "Quarterly",
+    "evidenceRequired": "Review log",
+    "mappedRisk": "RISK-002",
+    "mappedObligation": "Quarterly Evidence Review",
+    "status": "Needs Review",
+    "linkedEvidence": ["EVD-001", "EVD-006"]
+  },
+  {
+    "id": "CTRL-002",
+    "name": "Annual operating agreement review",
+    "controlType": "Governance",
+    "owner": "Executive",
+    "frequency": "Annual",
+    "evidenceRequired": "Signed review note",
+    "mappedRisk": "RISK-001",
+    "mappedObligation": "OBL-006",
     "status": "Active",
-    "linkedEvidence": "Records review log"
+    "linkedEvidence": ["EVD-003"]
   },
   {
-    "name": "Expense Receipt Capture",
-    "type": "Finance SOP",
-    "owner": "Finance",
-    "frequency": "Weekly",
-    "status": "Draft",
-    "linkedEvidence": "Receipt folder"
-  },
-  {
-    "name": "License Renewal Check",
-    "type": "Compliance Control",
+    "id": "CTRL-003",
+    "name": "Vendor contract review",
+    "controlType": "Vendor Control",
     "owner": "Governance",
     "frequency": "Quarterly",
-    "status": "Active",
-    "linkedEvidence": "License inventory"
+    "evidenceRequired": "Contract inventory",
+    "mappedRisk": "RISK-003",
+    "mappedObligation": "Vendor Review",
+    "status": "Needs Review",
+    "linkedEvidence": ["EVD-005"]
   },
   {
-    "name": "Backup Owner Review",
-    "type": "Continuity Control",
+    "id": "CTRL-004",
+    "name": "License renewal verification",
+    "controlType": "Compliance",
+    "owner": "Operations",
+    "frequency": "Monthly",
+    "evidenceRequired": "Renewal proof",
+    "mappedRisk": "RISK-004",
+    "mappedObligation": "OBL-002",
+    "status": "Active",
+    "linkedEvidence": ["EVD-002"]
+  },
+  {
+    "id": "CTRL-005",
+    "name": "Backup owner assignment",
+    "controlType": "Continuity",
     "owner": "Executive",
-    "frequency": "Quarterly",
-    "status": "Review",
-    "linkedEvidence": "Role map"
+    "frequency": "Annual",
+    "evidenceRequired": "Role map",
+    "mappedRisk": "RISK-001",
+    "mappedObligation": "Ownership Review",
+    "status": "Draft",
+    "linkedEvidence": []
+  },
+  {
+    "id": "CTRL-006",
+    "name": "Expense receipt retention",
+    "controlType": "Finance SOP",
+    "owner": "Finance",
+    "frequency": "Weekly",
+    "evidenceRequired": "Receipt register",
+    "mappedRisk": "Financial Documentation",
+    "mappedObligation": "OBL-004",
+    "status": "Active",
+    "linkedEvidence": ["EVD-006", "EVD-010"]
   }
 ]
