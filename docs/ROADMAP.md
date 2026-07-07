@@ -17,11 +17,11 @@ Included:
 - Evidence Tracker
 - Business Expenses
 - Governance Intelligence Roadmap
-- README, architecture notes, screenshots guidance, and GitHub Pages workflow
+- README, architecture notes, case study, visual strategy notes, and GitHub Pages workflow
 
 ## Version 2: Light Logic Demo
 
-Status: In progress and partially built.
+Status: Built with minor polish remaining.
 
 Completed:
 
@@ -34,16 +34,19 @@ Completed:
 - Search, category filter, and status filter on major tracker pages
 - Licenses JSON data model
 - Explicit `data-dynamic-table` anchors
+- Recent Activity hydration from `activity.json`
 - Lightweight data and link validation script
+- Validation GitHub Action
+- Case study walkthrough
+- Screenshot-free README strategy document
 
 Remaining polish:
 
-- Render Recent Activity from `activity.json`
 - Add relationship highlighting between connected records
 - Add dashboard metric explanations or hover notes
 - Improve mobile navigation
-- Add screenshots to `/assets/screenshots`
-- Add screenshot references to README
+- Add README badges and diagrams if desired
+- Add optional screenshots only for external portfolio use
 
 ## Version 2.1: Portfolio Polish
 
@@ -51,10 +54,9 @@ Planned improvements:
 
 - Add sample export view
 - Add accessibility notes
-- Add keyboard/focus QA notes
+- Add keyboard and focus QA notes
 - Add print-friendly report page
-- Add case study walkthrough
-- Add better mobile navigation behavior
+- Add stronger README visual formatting with diagrams instead of image dependencies
 
 ## Version 3: Intelligence Layer
 
