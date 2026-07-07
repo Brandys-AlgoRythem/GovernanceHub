@@ -1,12 +1,12 @@
 # Governance Hub
 
-Governance Hub is a local-first governance operations prototype for small businesses.
+Governance Hub is a local-first business GRC workspace for organizing obligations, evidence, risk, controls, documents, licenses, expenses, vendors, and governance readiness from one executive dashboard.
 
-It demonstrates how a business can organize obligations, evidence, risk, controls, documents, licenses, expenses, vendors, and governance readiness from one executive dashboard.
+It is built as a working portfolio app with sample data. A reviewer can enter dummy business information, save it locally in the browser, open the workspace, and see how a comprehensive business governance system would be structured.
 
-The app is built with static HTML, CSS, and JavaScript so it can run on GitHub Pages without a backend, database, authentication layer, or build step.
+The app uses static HTML, CSS, JavaScript, local JSON, and browser storage so it can run on GitHub Pages without a backend, database, authentication layer, or build step.
 
-## Why This Project Exists
+## Why This Exists
 
 Small businesses often manage governance through scattered files, inbox searches, memory, text threads, and spreadsheets that become haunted once the business has more than one deadline.
 
@@ -17,13 +17,14 @@ Governance Hub models a cleaner operating system:
 3. Store governance documents.
 4. Map evidence to requirements.
 5. Track risks and controls.
-6. Give leaders an executive summary.
+6. Monitor vendors, expenses, and dependencies.
+7. Give leaders an executive summary.
 
 ## Current Version
 
-Current version: **Version 2 Light Logic Demo**
+Current version: **Version 2 Working Sample Workspace**
 
-Version 2 keeps the app static and local-first while adding JSON-fed tables, calculated dashboard metrics, stable demo due-date logic, quick filters, search, category filtering, status filtering, recent activity hydration, and validation checks.
+Version 2 keeps the app static and local-first while adding JSON-fed tables, calculated dashboard metrics, stable due-date logic, quick filters, search, category filtering, status filtering, recent activity hydration, local dummy workspace inputs, and validation checks.
 
 ## Core Modules
 
@@ -38,11 +39,43 @@ Version 2 keeps the app static and local-first while adding JSON-fed tables, cal
 - Business Expenses
 - Governance Intelligence Roadmap
 
+## Working Workspace Behavior
+
+The landing page includes a workspace setup form.
+
+A reviewer can enter dummy business details such as business name, entity type, state, governance lead, primary GRC focus, and review cadence.
+
+Those values are saved in browser storage and reflected in the workspace dashboard.
+
+This makes the project feel like a working local-first business GRC app while still using safe sample data.
+
+## Comprehensive Business GRC Coverage
+
+Governance Hub is organized around the major areas a business GRC workspace needs:
+
+- Business foundation
+- Ownership and roles
+- Obligations and renewals
+- Governance records
+- Licenses and permits
+- Risk register
+- Controls and SOPs
+- Evidence tracker
+- Expense support
+- Vendor dependencies
+- Continuity review
+- Audit readiness
+- Executive reporting
+
+See:
+
+`docs/GRC_OPERATING_MODEL.md`
+
 ## Visual Portfolio Strategy
 
 This repo does not require screenshots to explain the project.
 
-The portfolio story is carried through the README, the case study, module summaries, architecture notes, data relationships, and the validation workflow.
+The portfolio story is carried through the README, the case study, the operating model, module summaries, architecture notes, data relationships, and the validation workflow.
 
 Screenshots can still be added later as optional polish, but they are not required proof.
 
@@ -57,7 +90,7 @@ The project includes a full case study at:
 
 `docs/CASE_STUDY.md`
 
-It explains the problem, product hypothesis, target user, GRC concepts, information architecture, data model, Version 1 build, Version 2 logic, tradeoffs, roadmap, and skills demonstrated.
+It explains the problem, product hypothesis, target user, GRC concepts, information architecture, data model, build logic, tradeoffs, roadmap, and skills demonstrated.
 
 ## Architecture
 
@@ -74,9 +107,9 @@ GovernanceHub/
 
 The design system is split into focused CSS files for tokens, base styling, layout, hive visuals, cards, tables, badges, page-specific patterns, and responsive behavior.
 
-## Mock Data Model
+## Data Model
 
-Mock data lives in `/data`:
+Sample data lives in `/data`:
 
 - `business.json`
 - `obligations.json`
@@ -89,14 +122,16 @@ Mock data lives in `/data`:
 - `licenses.json`
 - `activity.json`
 
-The data is fake, but the structure is meaningful. Records use IDs, owners, dates, statuses, and relationship fields so the prototype can model how governance work connects across documents, risks, controls, evidence, expenses, vendors, and licenses.
+The data is sample data, but the structure is meaningful. Records use IDs, owners, dates, statuses, and relationship fields so the workspace can model how governance work connects across documents, risks, controls, evidence, expenses, vendors, and licenses.
 
 ## Version 2 Logic
 
 Current interactive pieces:
 
+- Local workspace setup form
+- Browser-saved dummy business details
 - Local JSON loader
-- Stable demo date logic
+- Stable due-date logic
 - Calculated dashboard metrics
 - Dynamic dashboard deadline table
 - Recent activity from `activity.json`
@@ -142,7 +177,7 @@ http://localhost:8000
 ## Suggested Review Path
 
 ```txt
-Dashboard → Obligations → Vault → Licenses → Risks → Controls → Evidence → Expenses → Roadmap
+Landing Page → Workspace Setup → Dashboard → Obligations → Vault → Licenses → Risks → Controls → Evidence → Expenses → Roadmap
 ```
 
 ## GitHub Pages
@@ -165,13 +200,15 @@ Configure GitHub Pages to use GitHub Actions for deployment.
 - Local-first product thinking
 - Frontend prototyping
 - Static deployment planning
-- Mock data modeling
+- Sample data modeling
 - Lightweight JavaScript logic
 - Data validation thinking
 - Portfolio case study writing
 
-## Portfolio Boundary
+## Boundary
 
-Governance Hub is a portfolio prototype, not a production compliance platform.
+Governance Hub is a working portfolio app with sample data.
 
-It is designed to show product thinking, governance structure, GRC workflow design, interface planning, data relationships, and frontend execution.
+It is designed to show how a comprehensive business GRC workspace can be structured, navigated, validated, and expanded.
+
+It is not a production compliance platform and does not provide legal, tax, financial, or compliance advice.
