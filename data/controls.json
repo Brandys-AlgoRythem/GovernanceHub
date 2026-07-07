@@ -7,7 +7,7 @@
     "frequency": "Quarterly",
     "evidenceRequired": "Review log",
     "mappedRisk": "RISK-002",
-    "mappedObligation": "Quarterly Evidence Review",
+    "mappedObligation": "OBL-004",
     "status": "Needs Review",
     "linkedEvidence": ["EVD-001", "EVD-006"]
   },
@@ -31,7 +31,7 @@
     "frequency": "Quarterly",
     "evidenceRequired": "Contract inventory",
     "mappedRisk": "RISK-003",
-    "mappedObligation": "Vendor Review",
+    "mappedObligation": "",
     "status": "Needs Review",
     "linkedEvidence": ["EVD-005"]
   },
@@ -55,7 +55,7 @@
     "frequency": "Annual",
     "evidenceRequired": "Role map",
     "mappedRisk": "RISK-001",
-    "mappedObligation": "Ownership Review",
+    "mappedObligation": "OBL-007",
     "status": "Draft",
     "linkedEvidence": []
   },
@@ -66,7 +66,7 @@
     "owner": "Finance",
     "frequency": "Weekly",
     "evidenceRequired": "Receipt register",
-    "mappedRisk": "Financial Documentation",
+    "mappedRisk": "",
     "mappedObligation": "OBL-004",
     "status": "Active",
     "linkedEvidence": ["EVD-006", "EVD-010"]
