@@ -2,7 +2,7 @@
 
 Governance Hub is a local-first business GRC workspace for organizing obligations, evidence, risk, controls, documents, licenses, expenses, vendors, and governance readiness from one executive dashboard.
 
-It is built as a working portfolio app with sample data. A reviewer can enter dummy business information, save it locally in the browser, open the workspace, and see how a comprehensive business governance system would be structured.
+It is built as a working portfolio app with sample data. A reviewer can enter a sample business profile, save it locally in the browser, open the workspace, and see how a comprehensive business governance system would be structured.
 
 The app uses static HTML, CSS, JavaScript, local JSON, and browser storage so it can run on GitHub Pages without a backend, database, authentication layer, or build step.
 
@@ -24,7 +24,7 @@ Governance Hub models a cleaner operating system:
 
 Current version: **Version 2 Working Sample Workspace**
 
-Version 2 keeps the app static and local-first while adding JSON-fed tables, calculated dashboard metrics, stable due-date logic, quick filters, search, category filtering, status filtering, recent activity hydration, local dummy workspace inputs, and validation checks.
+Version 2 keeps the app static and local-first while adding JSON-fed tables, calculated dashboard metrics, stable due-date logic, quick filters, search, category filtering, status filtering, recent activity hydration, local sample workspace inputs, and validation checks.
 
 ## Core Modules
 
@@ -43,7 +43,7 @@ Version 2 keeps the app static and local-first while adding JSON-fed tables, cal
 
 The landing page includes a workspace setup form.
 
-A reviewer can enter dummy business details such as business name, entity type, state, governance lead, primary GRC focus, and review cadence.
+A reviewer can enter sample business details such as business name, entity type, state, workspace owner, primary GRC focus, and review cadence.
 
 Those values are saved in browser storage and reflected in the workspace dashboard.
 
@@ -129,7 +129,7 @@ The data is sample data, but the structure is meaningful. Records use IDs, owner
 Current interactive pieces:
 
 - Local workspace setup form
-- Browser-saved dummy business details
+- Browser-saved sample business profile
 - Local JSON loader
 - Stable due-date logic
 - Calculated dashboard metrics
