@@ -34,15 +34,15 @@
         <div>
           <p class="eyebrow">Business expenses</p>
           <h1>Spend and receipt readiness</h1>
-          <p>Static expense chamber for monthly spend, quarterly totals, vendors, receipt evidence, renewal flags, and category review.</p>
+          <p>Track monthly spend, quarterly totals, vendors, receipt evidence, renewal flags, and category review. Version 2 will calculate these values from JSON.</p>
         </div>
-        <span class="badge badge-warning">Receipts review</span>
+        <span id="expenses-badge" class="badge badge-warning">Receipts review</span>
       </header>
       <section class="card-grid">
-        <article class="metric-card"><strong>$2.4k</strong><span>Quarterly spend</span></article>
-        <article class="metric-card"><strong>92%</strong><span>Receipt coverage</span></article>
-        <article class="metric-card"><strong>6</strong><span>Expense categories</span></article>
-        <article class="metric-card"><strong>4</strong><span>Recurring vendors</span></article>
+        <article class="metric-card"><strong id="expenses-quarterly">$0</strong><span>Quarterly spend</span></article>
+        <article class="metric-card"><strong id="expenses-receipt">0%</strong><span>Receipt coverage</span></article>
+        <article class="metric-card"><strong id="expenses-categories">0</strong><span>Expense categories</span></article>
+        <article class="metric-card"><strong id="expenses-vendors">0</strong><span>Recurring vendors</span></article>
       </section>
       <section class="two-column-grid section-stack">
         <article class="surface-card">
@@ -53,7 +53,7 @@
             <div class="hex hex-success"><span>Insurance</span><small>$640</small></div>
             <div class="hex"><span>Office</span><small>$210</small></div>
             <div class="hex"><span>Legal</span><small>$350</small></div>
-            <div class="hex hex-core"><span>Finance</span><small>$2.4k QTD</small></div>
+            <div class="hex hex-core"><span>Finance</span><small>$0</small></div>
             <div class="hex"><span>Marketing</span><small>$180</small></div>
             <div class="hex"><span>Travel</span><small>$0</small></div>
             <div class="hex hex-warning"><span>Taxes</span><small>review</small></div>
@@ -61,8 +61,8 @@
           </div>
         </article>
         <aside class="surface-card">
-          <h2>Static monthly trend</h2>
-          <ul class="stat-list">
+          <h2>Monthly trend</h2>
+          <ul class="stat-list" id="expenses-trend">
             <li><span>January</span><strong>$420</strong></li>
             <li><span>February</span><strong>$680</strong></li>
             <li><span>March</span><strong>$590</strong></li>
@@ -78,15 +78,14 @@
             <thead>
               <tr><th>Date</th><th>Vendor</th><th>Category</th><th>Amount</th><th>Status</th><th>Linked evidence</th></tr>
             </thead>
-            <tbody>
-              <tr><td>Jan 14</td><td><strong>GitHub</strong></td><td>Software</td><td>$12</td><td><span class="badge badge-success">Verified</span></td><td>Receipt batch</td></tr>
-              <tr><td>Feb 02</td><td><strong>Insurance Carrier</strong></td><td>Insurance</td><td>$640</td><td><span class="badge badge-success">Stored</span></td><td>Certificate</td></tr>
-              <tr><td>Mar 19</td><td><strong>Office Depot</strong></td><td>Office</td><td>$210</td><td><span class="badge badge-warning">Review</span></td><td>Receipt needed</td></tr>
+            <tbody id="expenses-body">
+              <!-- Rendered by data.js -->
             </tbody>
           </table>
         </div>
       </section>
     </main>
   </div>
+  <script src="../scripts/data.js"></script>
 </body>
 </html>
