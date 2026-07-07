@@ -2,7 +2,7 @@
 
 ## Version 1: Static Portfolio Foundation
 
-Status: Built as static HTML, CSS, JavaScript, and mock JSON data.
+Status: Built.
 
 Included:
 
@@ -17,40 +17,56 @@ Included:
 - Evidence Tracker
 - Business Expenses
 - Governance Intelligence Roadmap
+- README, architecture notes, screenshots guidance, and GitHub Pages workflow
 
-## Version 1.1: Portfolio Polish
+## Version 2: Light Logic Demo
+
+Status: In progress and partially built.
+
+Completed:
+
+- Local JSON loader
+- Stable demo due-date logic
+- Calculated dashboard metrics
+- Dynamic dashboard deadline table
+- JSON-backed table renderer
+- Quick filter chips
+- Search, category filter, and status filter on major tracker pages
+- Licenses JSON data model
+- Explicit `data-dynamic-table` anchors
+- Lightweight data and link validation script
+
+Remaining polish:
+
+- Render Recent Activity from `activity.json`
+- Add relationship highlighting between connected records
+- Add dashboard metric explanations or hover notes
+- Improve mobile navigation
+- Add screenshots to `/assets/screenshots`
+- Add screenshot references to README
+
+## Version 2.1: Portfolio Polish
 
 Planned improvements:
 
-- Add screenshots to `/assets/screenshots`
 - Add sample export view
 - Add accessibility notes
-- Add lightweight chart polish
-- Add better mobile navigation
-- Add more detailed README screenshots
-
-## Version 2: Operational Prototype
-
-Possible next scope:
-
-- Local storage persistence
-- Import and export JSON
-- Editable records
-- Filters by status, owner, deadline, and risk level
-- Evidence to obligation mapping
-- Control to SOP mapping
-- Expense category summaries
+- Add keyboard/focus QA notes
+- Add print-friendly report page
+- Add case study walkthrough
+- Add better mobile navigation behavior
 
 ## Version 3: Intelligence Layer
 
 Possible intelligence features:
 
-- Governance score logic
+- Governance score explanations
 - Deadline risk signals
 - Missing evidence detection
 - Renewal forecast
 - Vendor dependency map
 - Audit readiness snapshot
+- Local-first executive summary assistant
 
 ## Optional Modules
 
