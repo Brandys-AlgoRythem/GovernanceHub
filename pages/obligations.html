@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="../styles/tokens.css">
   <link rel="stylesheet" href="../styles/base.css">
   <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/cards.css">
+  <link rel="stylesheet" href="../styles/badges.css">
+  <link rel="stylesheet" href="../styles/tables.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
   <div class="app-shell">
@@ -26,13 +30,33 @@
         <div>
           <p class="eyebrow">Obligations tracker</p>
           <h1>Deadlines and recurring duties</h1>
-          <p>Static Sprint 1 scaffold for annual reports, license renewals, tax milestones, ownership reviews, and evidence requirements.</p>
+          <p>Static obligation inventory showing how filings, renewals, evidence, and owners roll into the governance workflow.</p>
         </div>
+        <span class="badge badge-warning">3 due soon</span>
       </header>
       <section class="card-grid">
         <article class="metric-card"><strong>8</strong><span>Mock obligations</span></article>
         <article class="metric-card"><strong>3</strong><span>Due soon</span></article>
         <article class="metric-card"><strong>0</strong><span>Overdue</span></article>
+        <article class="metric-card"><strong>6</strong><span>Evidence links</span></article>
+      </section>
+      <section class="section-stack">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Core obligation register</caption>
+            <thead>
+              <tr><th>Obligation</th><th>Category</th><th>Frequency</th><th>Owner</th><th>Status</th><th>Evidence</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Annual State Report</strong></td><td>Corporate</td><td>Annual</td><td>Compliance</td><td><span class="badge badge-warning">Due soon</span></td><td>Filing receipt</td></tr>
+              <tr><td><strong>Business License Renewal</strong></td><td>Licensing</td><td>Annual</td><td>Operations</td><td><span class="badge badge-success">On track</span></td><td>Renewal proof</td></tr>
+              <tr><td><strong>Quarterly Estimated Tax</strong></td><td>Finance</td><td>Quarterly</td><td>Finance</td><td><span class="badge badge-warning">Review</span></td><td>Payment record</td></tr>
+              <tr><td><strong>Insurance Renewal</strong></td><td>Continuity</td><td>Annual</td><td>Operations</td><td><span class="badge badge-success">On track</span></td><td>Certificate</td></tr>
+              <tr><td><strong>Operating Agreement Review</strong></td><td>Governance</td><td>Annual</td><td>Owner</td><td><span class="badge badge-neutral">Planned</span></td><td>Signed copy</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Version 2 will calculate status from mock JSON due dates instead of hard-coded badges.</p>
       </section>
     </main>
   </div>
