@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "ACT-001",
+    "date": "2026-07-07",
+    "title": "Version 1 page set completed",
+    "area": "Portfolio",
+    "status": "Complete",
+    "linkedItems": ["pages/dashboard.html", "README.md"]
+  },
+  {
+    "id": "ACT-002",
+    "date": "2026-07-07",
+    "title": "Evidence tracker expanded",
+    "area": "Evidence",
+    "status": "Complete",
+    "linkedItems": ["pages/evidence.html", "data/evidence.json"]
+  },
+  {
+    "id": "ACT-003",
+    "date": "2026-07-07",
+    "title": "Expense chart added",
+    "area": "Expenses",
+    "status": "Complete",
+    "linkedItems": ["pages/expenses.html", "data/expenses.json"]
+  },
+  {
+    "id": "ACT-004",
+    "date": "2026-07-07",
+    "title": "Roadmap clarified",
+    "area": "Roadmap",
+    "status": "Complete",
+    "linkedItems": ["pages/roadmap.html"]
+  }
+]
