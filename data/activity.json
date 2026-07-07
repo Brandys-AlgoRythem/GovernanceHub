@@ -26,9 +26,25 @@
   {
     "id": "ACT-004",
     "date": "2026-07-07",
-    "title": "Roadmap clarified",
-    "area": "Roadmap",
+    "title": "Validation workflow added",
+    "area": "Quality Gate",
     "status": "Complete",
-    "linkedItems": ["pages/roadmap.html"]
+    "linkedItems": [".github/workflows/validate-data.yml", "scripts/validate-data.js"]
+  },
+  {
+    "id": "ACT-005",
+    "date": "2026-07-07",
+    "title": "Case study added",
+    "area": "Documentation",
+    "status": "Complete",
+    "linkedItems": ["docs/CASE_STUDY.md"]
+  },
+  {
+    "id": "ACT-006",
+    "date": "2026-07-07",
+    "title": "Screenshot-free README strategy adopted",
+    "area": "Portfolio",
+    "status": "Complete",
+    "linkedItems": ["README.md", "docs/README_VISUAL_STRATEGY.md", "docs/SCREENSHOTS.md"]
   }
 ]
