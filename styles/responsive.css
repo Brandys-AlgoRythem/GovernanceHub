@@ -1,0 +1,33 @@
+@media (max-width: 720px) {
+  .content {
+    padding: 1.25rem;
+  }
+
+  .page-header {
+    display: block;
+  }
+
+  .hero-actions,
+  .action-row {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
