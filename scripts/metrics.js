@@ -30,6 +30,14 @@ function calculateRiskScore(risks) {
   return Math.round((controlled / risks.length) * 100);
 }
 
+function latestExpenseDate(expenses) {
+  const dates = expenses
+    .map((expense) => new Date(expense.date))
+    .filter((date) => !Number.isNaN(date.getTime()))
+    .sort((a, b) => b - a);
+  return dates[0] || new Date();
+}
+
 function calculateDashboardMetrics(data) {
   const obligations = data.obligations || [];
   const risks = data.risks || [];
@@ -47,13 +55,14 @@ function calculateDashboardMetrics(data) {
   const verifiedEvidence = countBy(evidence, (item) => item.status === 'Verified');
   const missingEvidence = countBy(evidence, (item) => item.status === 'Missing');
 
-  const currentMonth = new Date().getMonth();
-  const currentQuarter = `Q${Math.floor(currentMonth / 3) + 1}`;
+  const latestDate = latestExpenseDate(expenses);
+  const latestMonth = latestDate.getMonth();
+  const latestQuarter = `Q${Math.floor(latestMonth / 3) + 1}`;
   const monthlyExpenses = sumBy(expenses, (expense) => {
     const date = new Date(expense.date);
-    return date.getMonth() === currentMonth ? expense.amount : 0;
+    return date.getMonth() === latestMonth ? expense.amount : 0;
   });
-  const quarterlyExpenses = sumBy(expenses, (expense) => expense.quarter === currentQuarter ? expense.amount : 0);
+  const quarterlyExpenses = sumBy(expenses, (expense) => expense.quarter === latestQuarter ? expense.amount : 0);
 
   const documentScore = calculateDocumentScore(documents);
   const obligationScore = calculateObligationScore(obligations);
