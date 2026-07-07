@@ -1,6 +1,6 @@
 # Governance Hub Roadmap
 
-## Version 1: Static Portfolio Foundation
+## Version 1: Static App Foundation
 
 Status: Built.
 
@@ -19,14 +19,16 @@ Included:
 - Governance Intelligence Roadmap
 - README, architecture notes, case study, visual strategy notes, and GitHub Pages workflow
 
-## Version 2: Light Logic Demo
+## Version 2: Working Sample Workspace
 
 Status: Built with minor polish remaining.
 
 Completed:
 
+- Local workspace setup form
+- Browser-saved dummy business values
 - Local JSON loader
-- Stable demo due-date logic
+- Stable due-date logic
 - Calculated dashboard metrics
 - Dynamic dashboard deadline table
 - JSON-backed table renderer
@@ -39,16 +41,18 @@ Completed:
 - Validation GitHub Action
 - Case study walkthrough
 - Screenshot-free README strategy document
+- Business GRC operating model document
 
 Remaining polish:
 
 - Add relationship highlighting between connected records
 - Add dashboard metric explanations or hover notes
 - Improve mobile navigation
+- Expand local edit forms across more modules
 - Add README badges and diagrams if desired
 - Add optional screenshots only for external portfolio use
 
-## Version 2.1: Portfolio Polish
+## Version 2.1: Comprehensive GRC Workspace Polish
 
 Planned improvements:
 
@@ -57,6 +61,9 @@ Planned improvements:
 - Add keyboard and focus QA notes
 - Add print-friendly report page
 - Add stronger README visual formatting with diagrams instead of image dependencies
+- Add editable local records for obligations, risks, evidence, expenses, and licenses
+- Add vendor dependency view
+- Add continuity readiness view
 
 ## Version 3: Intelligence Layer
 
@@ -72,7 +79,7 @@ Possible intelligence features:
 
 ## Optional Modules
 
-These are intentionally outside Version 1 required scope.
+These are intentionally outside the current working workspace scope.
 
 ### Audit Center
 
