@@ -1,34 +1,86 @@
 [
   {
-    "date": "2026-07-01",
-    "vendor": "Kentucky Secretary of State",
-    "category": "State Filing",
-    "amount": 15.00,
-    "receipt": "Stored",
-    "businessPurpose": "Annual report filing"
+    "id": "EXP-001",
+    "date": "2026-01-14",
+    "vendor": "GitHub",
+    "category": "Software",
+    "amount": 12,
+    "frequency": "Monthly",
+    "receiptStatus": "Verified",
+    "linkedEvidence": ["EVD-010"],
+    "quarter": "Q1",
+    "notes": "Repository hosting and development tooling."
   },
   {
-    "date": "2026-07-03",
+    "id": "EXP-002",
+    "date": "2026-02-02",
+    "vendor": "Legal Template Vendor",
+    "category": "Legal",
+    "amount": 180,
+    "frequency": "One-time",
+    "receiptStatus": "Pending Review",
+    "linkedEvidence": ["EVD-011"],
+    "quarter": "Q1",
+    "notes": "Formation document template review."
+  },
+  {
+    "id": "EXP-003",
+    "date": "2026-03-09",
+    "vendor": "Insurance Provider",
+    "category": "Insurance",
+    "amount": 240,
+    "frequency": "Monthly",
+    "receiptStatus": "Missing",
+    "linkedEvidence": ["EVD-004"],
+    "quarter": "Q1",
+    "notes": "Renewal proof needed."
+  },
+  {
+    "id": "EXP-004",
+    "date": "2026-04-05",
     "vendor": "Office Supply Vendor",
-    "category": "Operations",
-    "amount": 42.18,
-    "receipt": "Stored",
-    "businessPurpose": "Records binder materials"
+    "category": "Office",
+    "amount": 61.4,
+    "frequency": "One-time",
+    "receiptStatus": "Verified",
+    "linkedEvidence": ["EVD-012"],
+    "quarter": "Q2",
+    "notes": "Governance binder supplies."
   },
   {
-    "date": "2026-07-05",
-    "vendor": "Domain Registrar",
-    "category": "Technology",
-    "amount": 18.99,
-    "receipt": "Needed",
-    "businessPurpose": "Portfolio domain planning"
+    "id": "EXP-005",
+    "date": "2026-04-12",
+    "vendor": "Marketing Design Tool",
+    "category": "Marketing",
+    "amount": 29,
+    "frequency": "Monthly",
+    "receiptStatus": "Verified",
+    "linkedEvidence": ["EVD-013"],
+    "quarter": "Q2",
+    "notes": "Portfolio asset creation."
   },
   {
-    "date": "2026-07-06",
-    "vendor": "Printing Service",
-    "category": "Documentation",
-    "amount": 61.40,
-    "receipt": "Stored",
-    "businessPurpose": "Governance records packet"
+    "id": "EXP-006",
+    "date": "2026-04-18",
+    "vendor": "Tax Prep Support",
+    "category": "Taxes",
+    "amount": 320,
+    "frequency": "Quarterly",
+    "receiptStatus": "Pending Review",
+    "linkedEvidence": ["EVD-014"],
+    "quarter": "Q2",
+    "notes": "Estimated tax support."
+  },
+  {
+    "id": "EXP-007",
+    "date": "2026-04-22",
+    "vendor": "Professional Services Partner",
+    "category": "Professional Services",
+    "amount": 410,
+    "frequency": "As Needed",
+    "receiptStatus": "Verified",
+    "linkedEvidence": ["EVD-015"],
+    "quarter": "Q2",
+    "notes": "Operations support planning."
   }
 ]
