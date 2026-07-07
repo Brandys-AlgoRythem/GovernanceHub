@@ -100,6 +100,7 @@ Current Version 2 features include:
 - Recent activity hydration
 - Data validation script
 - Validation GitHub Action
+- Screenshot-free README strategy
 
 The goal is not to create production software. The goal is to show that the prototype has real product logic and that the data model can support future workflows.
 
@@ -121,7 +122,8 @@ Future work could include:
 - Local storage notes
 - Editable mock records
 - Print-friendly audit snapshot
-- Screenshot gallery
+- Optional visual gallery
+- README diagram polish
 - Mobile navigation polish
 - Governance score explanations
 - Missing evidence detection
