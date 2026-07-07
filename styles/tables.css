@@ -1,0 +1,49 @@
+.table-card {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.82rem;
+  border-bottom: 1px solid var(--color-line-soft);
+  text-align: left;
+}
+
+.data-table th {
+  color: var(--color-gold-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  color: var(--color-muted);
+}
+
+.data-table td strong {
+  color: var(--color-cream);
+}
+
+.table-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.table-toolbar input,
+.table-toolbar select {
+  min-height: 42px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: rgba(9, 8, 7, 0.66);
+  color: var(--color-cream);
+  padding: 0 0.9rem;
+}
