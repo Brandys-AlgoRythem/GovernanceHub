@@ -263,6 +263,7 @@ async function hydrateCurrentTable() {
 
 window.GovernanceTables = {
   tableConfigs,
+  pageTableType,
   renderDynamicTable,
   hydrateCurrentTable
 };
