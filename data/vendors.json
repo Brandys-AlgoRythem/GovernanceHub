@@ -1,30 +1,52 @@
 [
   {
-    "name": "Banking Partner",
-    "category": "Finance",
-    "owner": "Executive",
-    "reviewDate": "Annual Review",
-    "status": "Active"
+    "id": "VND-001",
+    "name": "GitHub",
+    "category": "Software",
+    "owner": "Operations",
+    "reviewDate": "2027-01-14",
+    "status": "Active",
+    "linkedExpenses": ["EXP-001"],
+    "linkedRisks": []
   },
   {
+    "id": "VND-002",
+    "name": "Legal Template Vendor",
+    "category": "Legal",
+    "owner": "Governance",
+    "reviewDate": "2026-08-01",
+    "status": "Review",
+    "linkedExpenses": ["EXP-002"],
+    "linkedRisks": []
+  },
+  {
+    "id": "VND-003",
     "name": "Insurance Provider",
-    "category": "Continuity",
+    "category": "Insurance",
     "owner": "Finance",
     "reviewDate": "2026-09-01",
-    "status": "Review"
+    "status": "Review",
+    "linkedExpenses": ["EXP-003"],
+    "linkedRisks": ["RISK-005"]
   },
   {
-    "name": "Domain Registrar",
-    "category": "Technology",
-    "owner": "Operations",
-    "reviewDate": "2027-07-05",
-    "status": "Active"
-  },
-  {
-    "name": "Print Vendor",
-    "category": "Documentation",
+    "id": "VND-004",
+    "name": "Office Supply Vendor",
+    "category": "Office",
     "owner": "Operations",
     "reviewDate": "As Needed",
-    "status": "Active"
+    "status": "Active",
+    "linkedExpenses": ["EXP-004"],
+    "linkedRisks": []
+  },
+  {
+    "id": "VND-005",
+    "name": "Professional Services Partner",
+    "category": "Professional Services",
+    "owner": "Executive",
+    "reviewDate": "Quarterly",
+    "status": "Active",
+    "linkedExpenses": ["EXP-007"],
+    "linkedRisks": ["RISK-003"]
   }
 ]
