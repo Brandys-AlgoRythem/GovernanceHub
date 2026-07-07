@@ -4,6 +4,7 @@ const tableConfigs = {
     dataKey: 'obligations',
     categoryKey: 'category',
     statusKey: 'status',
+    quickFilters: ['All', 'Due Soon', 'Overdue', 'Completed', 'High Priority'],
     columns: [
       ['title', 'Obligation'],
       ['category', 'Category'],
@@ -22,6 +23,7 @@ const tableConfigs = {
     dataKey: 'documents',
     categoryKey: 'category',
     statusKey: 'status',
+    quickFilters: ['All', 'Stored', 'Needs Review', 'Draft', 'Pending Proof'],
     columns: [
       ['title', 'Document'],
       ['category', 'Category'],
@@ -38,6 +40,7 @@ const tableConfigs = {
     dataKey: 'risks',
     categoryKey: 'category',
     statusKey: 'status',
+    quickFilters: ['All', 'High', 'Medium', 'Low', 'Open', 'Mitigated'],
     columns: [
       ['id', 'Risk ID'],
       ['title', 'Risk'],
@@ -56,6 +59,7 @@ const tableConfigs = {
     dataKey: 'evidence',
     categoryKey: 'evidenceType',
     statusKey: 'status',
+    quickFilters: ['All', 'Verified', 'Pending', 'Missing', 'Expired'],
     columns: [
       ['title', 'Evidence'],
       ['supports', 'Supports'],
@@ -72,6 +76,7 @@ const tableConfigs = {
     dataKey: 'expenses',
     categoryKey: 'category',
     statusKey: 'receiptStatus',
+    quickFilters: ['All', 'Software', 'Insurance', 'Legal', 'Marketing', 'Office', 'Taxes'],
     columns: [
       ['date', 'Date'],
       ['vendor', 'Vendor'],
@@ -89,6 +94,7 @@ const tableConfigs = {
     dataKey: 'vendors',
     categoryKey: 'category',
     statusKey: 'status',
+    quickFilters: ['All', 'Active', 'Review'],
     columns: [
       ['name', 'Vendor'],
       ['category', 'Category'],
@@ -104,6 +110,7 @@ const tableConfigs = {
     dataKey: 'controls',
     categoryKey: 'controlType',
     statusKey: 'status',
+    quickFilters: ['All', 'Active', 'Needs Review', 'Draft'],
     columns: [
       ['name', 'Control'],
       ['controlType', 'Control Type'],
@@ -121,6 +128,10 @@ function normalize(value) {
   return String(value ?? '').toLowerCase();
 }
 
+function slug(value) {
+  return normalize(value).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 function displayValue(value, key) {
   if (Array.isArray(value)) return value.length ? value.join(', ') : 'None';
   if (key === 'amount') return `$${Number(value || 0).toLocaleString()}`;
@@ -129,8 +140,8 @@ function displayValue(value, key) {
 
 function badgeClass(status) {
   const value = normalize(status);
-  if (['verified', 'completed', 'active', 'stored', 'on track', 'controlled'].includes(value)) return 'success';
-  if (['due soon', 'pending review', 'needs review', 'draft', 'in progress', 'pending proof'].includes(value)) return 'warning';
+  if (['verified', 'completed', 'active', 'stored', 'on track', 'controlled', 'mitigated'].includes(value)) return 'success';
+  if (['due soon', 'pending review', 'needs review', 'draft', 'in progress', 'pending proof', 'medium'].includes(value)) return 'warning';
   if (['overdue', 'missing', 'expired', 'open', 'high'].includes(value)) return 'danger';
   return 'info';
 }
@@ -149,6 +160,24 @@ function enrichRows(type, rows) {
 
 function uniqueOptions(rows, key) {
   return [...new Set(rows.map((row) => row[key]).filter(Boolean))].sort();
+}
+
+function createQuickFilters(config) {
+  const filters = config.quickFilters || ['All'];
+  const row = document.createElement('div');
+  row.className = 'quick-filter-row';
+  row.dataset.quickFilterRow = 'true';
+
+  filters.forEach((label, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `filter-chip${index === 0 ? ' active' : ''}`;
+    button.dataset.quickFilter = slug(label);
+    button.textContent = label;
+    row.appendChild(button);
+  });
+
+  return row;
 }
 
 function createToolbar(config, rows) {
@@ -170,12 +199,47 @@ function createToolbar(config, rows) {
   const status = document.createElement('select');
   status.dataset.tableStatus = 'true';
   status.innerHTML = '<option value="">All statuses</option>';
-  uniqueOptions(rows, config.statusKey).forEach((option) => {
+  const statusValues = config.dataKey === 'obligations'
+    ? uniqueOptions(rows, 'computedStatus')
+    : uniqueOptions(rows, config.statusKey);
+  statusValues.forEach((option) => {
     status.insertAdjacentHTML('beforeend', `<option value="${option}">${option}</option>`);
   });
 
   toolbar.append(search, category, status);
   return toolbar;
+}
+
+function quickFilterMatch(type, row, filter) {
+  if (!filter || filter === 'all') return true;
+
+  if (type === 'obligations') {
+    if (filter === 'due-soon') return row.computedStatus === 'Due Soon';
+    if (filter === 'overdue') return row.computedStatus === 'Overdue';
+    if (filter === 'completed') return row.computedStatus === 'Completed';
+    if (filter === 'high-priority') return row.priority === 'High';
+  }
+
+  if (type === 'risks') {
+    if (['high', 'medium', 'low'].includes(filter)) return normalize(row.inherentRisk) === filter;
+    if (filter === 'open') return ['open', 'needs review'].includes(normalize(row.status));
+    if (filter === 'mitigated') return ['mitigated', 'controlled', 'closed', 'in progress'].includes(normalize(row.status)) || normalize(row.residualRisk) === 'low';
+  }
+
+  if (type === 'evidence') {
+    if (filter === 'pending') return normalize(row.status).includes('pending');
+    return normalize(row.status) === filter;
+  }
+
+  if (type === 'expenses') {
+    return normalize(row.category) === filter;
+  }
+
+  if (type === 'documents' || type === 'vendors' || type === 'controls') {
+    return normalize(row.status) === filter;
+  }
+
+  return true;
 }
 
 function renderTable(target, config, rows) {
@@ -204,16 +268,18 @@ function renderTable(target, config, rows) {
   else target.appendChild(table);
 }
 
-function applyFilters(target, config, rows) {
+function applyFilters(type, target, config, rows) {
   const search = normalize(target.querySelector('[data-table-search]')?.value);
   const category = target.querySelector('[data-table-category]')?.value || '';
   const status = target.querySelector('[data-table-status]')?.value || '';
+  const quick = target.dataset.activeQuickFilter || 'all';
 
   const filtered = rows.filter((row) => {
     const textMatch = !search || normalize(Object.values(row).flat().join(' ')).includes(search);
     const categoryMatch = !category || row[config.categoryKey] === category;
     const statusMatch = !status || row[config.statusKey] === status || row.computedStatus === status;
-    return textMatch && categoryMatch && statusMatch;
+    const quickMatch = quickFilterMatch(type, row, quick);
+    return textMatch && categoryMatch && statusMatch && quickMatch;
   });
 
   renderTable(target, config, filtered);
@@ -227,16 +293,33 @@ function renderDynamicTable(type, data, selector = '.table-card') {
   if (!target) return;
 
   const rows = enrichRows(type, data[config.dataKey] || []);
-  const oldToolbar = target.querySelector('.table-toolbar');
-  if (oldToolbar) oldToolbar.remove();
+  target.dataset.activeQuickFilter = 'all';
 
+  target.querySelector('[data-quick-filter-row]')?.remove();
+  target.querySelector('.table-toolbar')?.remove();
+
+  const chips = createQuickFilters(config);
   const toolbar = createToolbar(config, rows);
   const heading = target.querySelector('.card-header');
-  if (heading) heading.insertAdjacentElement('afterend', toolbar);
-  else target.prepend(toolbar);
+  if (heading) {
+    heading.insertAdjacentElement('afterend', chips);
+    chips.insertAdjacentElement('afterend', toolbar);
+  } else {
+    target.prepend(toolbar);
+    target.prepend(chips);
+  }
 
-  toolbar.addEventListener('input', () => applyFilters(target, config, rows));
-  toolbar.addEventListener('change', () => applyFilters(target, config, rows));
+  chips.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-quick-filter]');
+    if (!button) return;
+    chips.querySelectorAll('.filter-chip').forEach((chip) => chip.classList.remove('active'));
+    button.classList.add('active');
+    target.dataset.activeQuickFilter = button.dataset.quickFilter;
+    applyFilters(type, target, config, rows);
+  });
+
+  toolbar.addEventListener('input', () => applyFilters(type, target, config, rows));
+  toolbar.addEventListener('change', () => applyFilters(type, target, config, rows));
 
   renderTable(target, config, rows);
 }
