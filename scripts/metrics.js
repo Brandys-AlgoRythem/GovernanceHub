@@ -6,6 +6,10 @@ function sumBy(items, picker) {
   return items.reduce((total, item) => total + Number(picker(item) || 0), 0);
 }
 
+function obligationStatus(item) {
+  return window.GovernanceDates.getDueStatus(item.dueDate, item.status === 'Completed');
+}
+
 function calculateDocumentScore(documents) {
   if (!documents.length) return 0;
   const ready = countBy(documents, (doc) => ['Stored', 'Template'].includes(doc.status));
@@ -14,7 +18,7 @@ function calculateDocumentScore(documents) {
 
 function calculateObligationScore(obligations) {
   if (!obligations.length) return 0;
-  const ready = countBy(obligations, (item) => ['Completed', 'On Track'].includes(item.status));
+  const ready = countBy(obligations, (item) => ['Completed', 'On Track'].includes(obligationStatus(item)));
   return Math.round((ready / obligations.length) * 100);
 }
 
@@ -44,16 +48,17 @@ function calculateDashboardMetrics(data) {
   const documents = data.documents || [];
   const evidence = data.evidence || [];
   const expenses = data.expenses || [];
+  const controls = data.controls || [];
 
-  const dueDates = window.GovernanceDates;
   const totalObligations = obligations.length;
-  const upcomingDeadlines = countBy(obligations, (item) => dueDates.isWithinDays(item.dueDate, 30));
-  const overdueObligations = countBy(obligations, (item) => dueDates.getDueStatus(item.dueDate, item.status === 'Completed') === 'Overdue');
+  const upcomingDeadlines = countBy(obligations, (item) => window.GovernanceDates.isWithinDays(item.dueDate, 30));
+  const overdueObligations = countBy(obligations, (item) => obligationStatus(item) === 'Overdue');
   const openRisks = countBy(risks, (risk) => !['Closed', 'Controlled'].includes(risk.status));
   const highRisks = countBy(risks, (risk) => risk.inherentRisk === 'High');
   const totalDocuments = documents.length;
   const verifiedEvidence = countBy(evidence, (item) => item.status === 'Verified');
   const missingEvidence = countBy(evidence, (item) => item.status === 'Missing');
+  const controlsCount = controls.length;
 
   const latestDate = latestExpenseDate(expenses);
   const latestMonth = latestDate.getMonth();
@@ -79,6 +84,7 @@ function calculateDashboardMetrics(data) {
     totalDocuments,
     verifiedEvidence,
     missingEvidence,
+    controlsCount,
     monthlyExpenses,
     quarterlyExpenses,
     documentScore,
