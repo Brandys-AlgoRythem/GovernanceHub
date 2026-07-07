@@ -31,7 +31,7 @@
           <a data-nav href="expenses.html">Expenses</a>
           <a data-nav href="roadmap.html">Roadmap</a>
         </nav>
-        <div class="sidebar-footer">Static V1 prototype. Mock data only. Built for portfolio review.</div>
+        <div class="sidebar-footer">V2 light-logic demo. Mock data only. Built for portfolio review.</div>
       </div>
     </aside>
     <div class="main-panel">
@@ -46,29 +46,29 @@
         </section>
 
         <section class="metric-grid">
-          <article class="metric-card"><span>Upcoming Deadlines</span><strong>3</strong><small>Next 90 days</small></article>
-          <article class="metric-card"><span>Action Items</span><strong>2</strong><small>Owner follow-up</small></article>
-          <article class="metric-card"><span>Continuity Risk</span><strong>1</strong><small>Needs review</small></article>
-          <article class="metric-card"><span>Documents</span><strong>24</strong><small>Vault records</small></article>
-          <article class="metric-card"><span>Evidence Coverage</span><strong>81%</strong><small>Mapped proofs</small></article>
-          <article class="metric-card"><span>Open Risks</span><strong>4</strong><small>Register items</small></article>
-          <article class="metric-card"><span>Controls</span><strong>6</strong><small>Active or draft</small></article>
-          <article class="metric-card"><span>Expenses</span><strong>$138</strong><small>Current sample month</small></article>
+          <article class="metric-card" data-metric="upcomingDeadlines"><span>Upcoming Deadlines</span><strong>0</strong><small>Next 30 demo days</small></article>
+          <article class="metric-card" data-metric="overdueObligations"><span>Overdue Obligations</span><strong>0</strong><small>Needs owner action</small></article>
+          <article class="metric-card" data-metric="highRisks"><span>High Risks</span><strong>0</strong><small>Inherent risk level</small></article>
+          <article class="metric-card" data-metric="totalDocuments"><span>Documents</span><strong>0</strong><small>Vault records</small></article>
+          <article class="metric-card" data-metric="healthScore"><span>Governance Health</span><strong>0%</strong><small>Composite score</small></article>
+          <article class="metric-card" data-metric="openRisks"><span>Open Risks</span><strong>0</strong><small>Register items</small></article>
+          <article class="metric-card" data-metric="verifiedEvidence"><span>Verified Evidence</span><strong>0</strong><small>Proof records</small></article>
+          <article class="metric-card" data-metric="quarterlyExpenses"><span>Quarterly Expenses</span><strong>$0</strong><small>Latest sample quarter</small></article>
         </section>
 
         <section class="card-grid two">
           <article class="panel-card">
-            <div class="card-header"><h2>Governance Health Hive</h2><span class="badge success">81%</span></div>
+            <div class="card-header"><h2>Governance Health Hive</h2><span class="badge success" data-health-score>0%</span></div>
             <div class="hive-map">
-              <div class="hive-node"><span>Compliance</span><small>Healthy</small></div>
+              <div class="hive-node"><span>Compliance</span><small>Tracked</small></div>
               <div class="hive-node"><span>Documents</span><small>Stored</small></div>
               <div class="hive-node"><span>Ownership</span><small>Mapped</small></div>
               <div class="hive-node"><span>Continuity</span><small>Review</small></div>
               <div class="hive-node core"><span>Hive Core</span><small>Executive View</small></div>
               <div class="hive-node"><span>Dependencies</span><small>Review</small></div>
               <div class="hive-node"><span>Events</span><small>Scheduled</small></div>
-              <div class="hive-node"><span>Evidence</span><small>81%</small></div>
-              <div class="hive-node"><span>Risk</span><small>4 Open</small></div>
+              <div class="hive-node"><span>Evidence</span><small data-hive-evidence>0%</small></div>
+              <div class="hive-node"><span>Risk</span><small data-hive-risks>0 Open</small></div>
             </div>
           </article>
 
@@ -88,10 +88,8 @@
             <div class="card-header"><h2>Upcoming Deadlines</h2><a href="obligations.html">View all</a></div>
             <table class="data-table">
               <thead><tr><th>Obligation</th><th>Due</th><th>Status</th></tr></thead>
-              <tbody>
-                <tr><td><strong>Registered Agent Review</strong></td><td>Aug 15, 2026</td><td><span class="badge danger">Open</span></td></tr>
-                <tr><td><strong>Insurance Renewal Review</strong></td><td>Sep 1, 2026</td><td><span class="badge warning">Review</span></td></tr>
-                <tr><td><strong>Quarterly Expense Reconciliation</strong></td><td>Sep 30, 2026</td><td><span class="badge warning">In Progress</span></td></tr>
+              <tbody data-dashboard-deadlines>
+                <tr><td><strong>Loading obligations</strong></td><td>Demo data</td><td><span class="badge info">Loading</span></td></tr>
               </tbody>
             </table>
           </article>
@@ -99,9 +97,9 @@
           <article class="panel-card">
             <div class="card-header"><h2>Recent Activity</h2><span class="badge info">Static</span></div>
             <ul class="stack-list">
-              <li><span>Governance Hub V1 structure created</span><strong>Today</strong></li>
-              <li><span>Expense tracker added to roadmap</span><strong>Yesterday</strong></li>
-              <li><span>Evidence coverage reviewed</span><strong>This week</strong></li>
+              <li><span>Governance Hub V2 logic layer added</span><strong>Today</strong></li>
+              <li><span>Evidence and obligation links reviewed</span><strong>Today</strong></li>
+              <li><span>Expense filters and chart added</span><strong>This week</strong></li>
               <li><span>Business records inventory updated</span><strong>This week</strong></li>
             </ul>
           </article>
@@ -110,6 +108,5 @@
     </div>
   </div>
   <script src="../scripts/navigation.js"></script>
-  <script src="../scripts/app.js"></script>
 </body>
 </html>
