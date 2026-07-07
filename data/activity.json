@@ -2,26 +2,26 @@
   {
     "id": "ACT-001",
     "date": "2026-07-07",
-    "title": "Version 1 page set completed",
-    "area": "Portfolio",
+    "title": "Working workspace landing page added",
+    "area": "Workspace",
     "status": "Complete",
-    "linkedItems": ["pages/dashboard.html", "README.md"]
+    "linkedItems": ["index.html", "scripts/workspace.js"]
   },
   {
     "id": "ACT-002",
     "date": "2026-07-07",
-    "title": "Evidence tracker expanded",
-    "area": "Evidence",
+    "title": "Dashboard reflects dummy business inputs",
+    "area": "Dashboard",
     "status": "Complete",
-    "linkedItems": ["pages/evidence.html", "data/evidence.json"]
+    "linkedItems": ["pages/dashboard.html", "scripts/workspace.js"]
   },
   {
     "id": "ACT-003",
     "date": "2026-07-07",
-    "title": "Expense chart added",
-    "area": "Expenses",
+    "title": "Business GRC operating model added",
+    "area": "Documentation",
     "status": "Complete",
-    "linkedItems": ["pages/expenses.html", "data/expenses.json"]
+    "linkedItems": ["docs/GRC_OPERATING_MODEL.md"]
   },
   {
     "id": "ACT-004",
@@ -34,7 +34,7 @@
   {
     "id": "ACT-005",
     "date": "2026-07-07",
-    "title": "Case study added",
+    "title": "Case study reframed as working GRC workspace",
     "area": "Documentation",
     "status": "Complete",
     "linkedItems": ["docs/CASE_STUDY.md"]
@@ -42,7 +42,7 @@
   {
     "id": "ACT-006",
     "date": "2026-07-07",
-    "title": "Screenshot-free README strategy adopted",
+    "title": "Screenshot-free portfolio strategy adopted",
     "area": "Portfolio",
     "status": "Complete",
     "linkedItems": ["README.md", "docs/README_VISUAL_STRATEGY.md", "docs/SCREENSHOTS.md"]
