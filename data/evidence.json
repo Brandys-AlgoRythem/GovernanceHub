@@ -72,6 +72,18 @@
     "linkedRisks": []
   },
   {
+    "id": "EVD-007",
+    "title": "EIN Confirmation Letter",
+    "supports": ["OBL-003"],
+    "evidenceType": "Tax Record",
+    "owner": "Finance",
+    "collectedDate": "2026-07-01",
+    "expirationDate": "Stored",
+    "status": "Verified",
+    "linkedDocument": "DOC-002",
+    "linkedRisks": []
+  },
+  {
     "id": "EVD-010",
     "title": "GitHub Invoice",
     "supports": ["EXP-001"],
