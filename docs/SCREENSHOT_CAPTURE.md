@@ -1,8 +1,12 @@
-# Screenshot Capture Guide
+# Optional Screenshot Capture Guide
 
-Use this guide to capture the portfolio screenshots for Governance Hub.
+Screenshots are optional polish for Governance Hub.
 
-## Start the local server
+The project is designed so the README, visual strategy notes, data relationships, validation workflow, and case study can explain the portfolio value without image files.
+
+Use this guide only if screenshots are needed later for a portfolio site, LinkedIn post, or visual README preview.
+
+## Local Preview
 
 From the repository root:
 
@@ -16,9 +20,11 @@ Open:
 http://localhost:8000
 ```
 
-## Capture these screens
+## Optional Screens
 
-Save the images in `assets/screenshots/` using these file names:
+If screenshots are added later, save them in `assets/screenshots/`.
+
+Optional file names:
 
 - `landing-page.png`
 - `dashboard.png`
@@ -27,28 +33,11 @@ Save the images in `assets/screenshots/` using these file names:
 - `expenses-chart.png`
 - `roadmap.png`
 
-## Recommended viewport
-
-Use a desktop viewport around:
-
-```txt
-1440 x 1100
-```
-
-## Screenshot checklist
-
-1. Landing page
-2. Dashboard
-3. Obligations page with filter chips visible
-4. Evidence tracker with filter chips visible
-5. Expenses page with chart visible
-6. Roadmap page
-
-## Console check
+## Console Check
 
 While clicking through the app, open browser developer tools and confirm there are no red console errors.
 
-Click through this path:
+Suggested click path:
 
 ```txt
 Dashboard → Obligations → Vault → Licenses → Risks → Controls → Evidence → Expenses → Roadmap
