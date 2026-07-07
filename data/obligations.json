@@ -42,7 +42,7 @@
     "priority": "Medium",
     "status": "Completed",
     "evidenceRequired": "EIN confirmation letter",
-    "linkedEvidence": ["EVD-003"],
+    "linkedEvidence": ["EVD-007"],
     "linkedDocuments": ["DOC-002"],
     "linkedRisks": [],
     "notes": "Foundation tax record stored in vault."
