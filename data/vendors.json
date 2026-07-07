@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Banking Partner",
+    "category": "Finance",
+    "owner": "Executive",
+    "reviewDate": "Annual Review",
+    "status": "Active"
+  },
+  {
+    "name": "Insurance Provider",
+    "category": "Continuity",
+    "owner": "Finance",
+    "reviewDate": "2026-09-01",
+    "status": "Review"
+  },
+  {
+    "name": "Domain Registrar",
+    "category": "Technology",
+    "owner": "Operations",
+    "reviewDate": "2027-07-05",
+    "status": "Active"
+  },
+  {
+    "name": "Print Vendor",
+    "category": "Documentation",
+    "owner": "Operations",
+    "reviewDate": "As Needed",
+    "status": "Active"
+  }
+]
