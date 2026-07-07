@@ -12,13 +12,13 @@ Governance Hub organizes those moving pieces into one local-first business GRC w
 
 A lightweight business GRC workspace can help small businesses understand what exists, what is due, what proof is missing, and which risks need attention without requiring a full enterprise platform.
 
-The app uses sample data and local dummy inputs so a reviewer can see how the system works without accounts, private data, paid APIs, or a backend.
+The app uses sample data and local starter profile inputs so a reviewer can see how the system works without accounts, paid APIs, or a backend.
 
 ## Target User
 
 The target user is a small business owner, operator, compliance coordinator, or governance-focused consultant supporting a small organization.
 
-The intended business size is roughly 1 to 15 employees. At that size, the organization may not need enterprise software, but it still needs records, ownership, deadlines, controls, evidence, vendors, expenses, and risk visibility.
+The intended business size is roughly 1 to 15 employees.
 
 ## GRC Concepts Modeled
 
@@ -56,7 +56,7 @@ The app separates the governance operating model into focused pages:
 
 The landing page includes a workspace setup form.
 
-A reviewer can enter dummy business details, save them locally in the browser, and see those values reflected in the dashboard.
+A reviewer can enter sample business details, save them locally in the browser, and see those values reflected in the dashboard.
 
 This gives the app a working feel while keeping the data safe, local, and sample-based.
 
@@ -66,7 +66,7 @@ The data model lives in `/data` as local JSON files.
 
 Core files include business, obligations, documents, evidence, risks, controls, expenses, vendors, licenses, and activity data.
 
-Records use IDs and relationship fields so the workspace can model how governance items connect. Obligations can link to evidence, documents, and risks. Controls can map to obligations and risks. Expenses can link to evidence. Licenses can link to proof records.
+Records use IDs and relationship fields so the workspace can model how governance items connect.
 
 ## Build Logic
 
@@ -75,7 +75,7 @@ The build uses static HTML, CSS, JavaScript, local JSON, and browser storage.
 Current features include:
 
 - Local workspace setup form
-- Browser-saved dummy business values
+- Browser-saved sample business profile
 - Local JSON loader
 - Stable due-date logic
 - Calculated dashboard metrics
@@ -95,26 +95,13 @@ Current features include:
 
 Governance Hub intentionally avoids backend systems, authentication, databases, paid APIs, and complex build tooling.
 
-That keeps the app easy to inspect, easy to deploy, and easy to explain in a portfolio review. The tradeoff is that it does not persist full records beyond the local dummy workspace values.
+That keeps the app easy to inspect, easy to deploy, and easy to explain in a portfolio review. The tradeoff is that it does not persist full records beyond the local starter profile values.
 
 This is acceptable because the project is designed as a working portfolio app with sample data, not as a production compliance platform.
 
 ## Future Roadmap
 
-Future work could include:
-
-- Relationship highlighting between linked records
-- Full editable local records
-- Dashboard activity feed polish
-- Export-ready report view
-- Local storage notes
-- Print-friendly audit snapshot
-- Optional visual gallery
-- README diagram polish
-- Mobile navigation polish
-- Governance score explanations
-- Missing evidence detection
-- Local-first governance assistant concept
+Future work could include relationship highlighting, full editable local records, export-ready reporting, print-friendly audit snapshots, mobile navigation polish, governance score explanations, and missing evidence detection.
 
 ## Skills Demonstrated
 
