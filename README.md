@@ -63,9 +63,9 @@ It does not provide legal advice, financial advice, tax advice, or real complian
 
 ## Current Version
 
-Current version: **Version 1 Static Portfolio Build**
+Current version: **Version 2 Light Logic Demo**
 
-Version 1 includes all required core pages and static mock content. Status badges and charts are static. Version 2 is planned to calculate statuses, metrics, and relationships from JSON.
+Version 2 keeps the app static and local-first, but adds JSON-fed tables, calculated dashboard metrics, stable demo due-date logic, quick filters, search, category filtering, status filtering, and a lightweight validation script.
 
 ## Architecture
 
@@ -89,7 +89,7 @@ The design system is split into CSS files:
 - `layout.css` for shell, sidebar, header, and grids
 - `hive.css` for the governance hive visual
 - `cards.css` for panels and metrics
-- `tables.css` for register tables
+- `tables.css` for register tables and filter chips
 - `badges.css` for status chips
 - `pages.css` for page-specific patterns and charts
 - `responsive.css` for mobile behavior
@@ -106,9 +106,10 @@ Mock data lives in `/data`:
 - `controls.json`
 - `expenses.json`
 - `vendors.json`
+- `licenses.json`
 - `activity.json`
 
-The data is fake, but the structure is intentionally meaningful. Records include IDs, owners, dates, statuses, evidence links, document links, risk links, and notes so Version 2 can add lightweight logic without a backend.
+The data is fake, but the structure is intentionally meaningful. Records include IDs, owners, dates, statuses, evidence links, document links, risk links, control links, expense links, license links, and notes so Version 2 can add lightweight logic without a backend.
 
 ## Screenshots
 
@@ -136,16 +137,23 @@ Complete foundation with required pages, mock content, status badges, static das
 
 ### Version 2: Light Logic Demo
 
-Planned additions:
+Current additions:
 
 - Calculated dashboard metrics from mock JSON
-- Due soon, overdue, completed status logic
-- Monthly and quarterly expense charts
-- Table filters by status and category
-- Search across documents, evidence, and obligations
+- Stable demo due-date logic
+- JSON-fed dynamic tables
+- Quick filter chips
+- Search across table rows
+- Category and status filters
+- License data model
+- Link validation script
+
+Planned additions:
+
 - Relationship highlighting between connected items
 - Optional local storage settings or notes
 - Print or export-ready mock report page
+- Dashboard activity feed from `activity.json`
 
 ### Governance Intelligence Future Scope
 
@@ -164,6 +172,8 @@ Governance Intelligence is a future roadmap concept for local-first governance a
 - Frontend prototyping
 - Static deployment planning
 - Mock data modeling
+- Lightweight JavaScript logic
+- Data validation thinking
 
 ## Version 1 Acceptance Checklist
 
@@ -183,9 +193,21 @@ Governance Intelligence is a future roadmap concept for local-first governance a
 - [x] App is designed for desktop
 - [x] Screenshots folder/doc exists
 
+## Version 2 Acceptance Checklist
+
+- [x] Local JSON loader exists
+- [x] Dashboard metrics calculate from mock data
+- [x] Due-date logic uses a stable demo date
+- [x] Major tables render from JSON
+- [x] Quick filters are available on major tracker pages
+- [x] Search, category filter, and status filter are available on dynamic tables
+- [x] Licenses have a mock JSON model
+- [x] Table targets use explicit `data-dynamic-table` anchors
+- [x] Data validation script exists
+
 ## How to Run
 
-Open `index.html` in a browser, or run a local static server:
+Because Version 2 uses `fetch()` to load local JSON files, run the app from a local static server instead of opening `index.html` directly.
 
 ```bash
 python3 -m http.server 8000
@@ -196,6 +218,16 @@ Then visit:
 ```txt
 http://localhost:8000
 ```
+
+## How to Validate
+
+Run the lightweight validation script from the repository root:
+
+```bash
+node scripts/validate-data.js
+```
+
+The script checks required files, JSON parsing, ID uniqueness, key relationship links, page navigation links, and referenced CSS/script assets.
 
 ## GitHub Pages
 
