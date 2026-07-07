@@ -1,0 +1,38 @@
+[
+  {
+    "id": "RISK-001",
+    "risk": "No backup signer assigned",
+    "category": "Operational",
+    "likelihood": "Low",
+    "impact": "High",
+    "owner": "Compliance",
+    "status": "Open"
+  },
+  {
+    "id": "RISK-002",
+    "risk": "Missing quarterly evidence review",
+    "category": "Compliance",
+    "likelihood": "Medium",
+    "impact": "Medium",
+    "owner": "Operations",
+    "status": "Open"
+  },
+  {
+    "id": "RISK-003",
+    "risk": "Vendor contract renewal not tracked",
+    "category": "Vendor",
+    "likelihood": "Low",
+    "impact": "Medium",
+    "owner": "Finance",
+    "status": "Mitigated"
+  },
+  {
+    "id": "RISK-004",
+    "risk": "Business continuity plan not tested",
+    "category": "Continuity",
+    "likelihood": "High",
+    "impact": "High",
+    "owner": "Operations",
+    "status": "Planned"
+  }
+]
