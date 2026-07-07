@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Kentucky Annual Report",
+    "category": "State Filing",
+    "owner": "Governance",
+    "dueDate": "2026-06-30",
+    "status": "Scheduled",
+    "evidence": "Submission confirmation"
+  },
+  {
+    "name": "Registered Agent Review",
+    "category": "Entity Control",
+    "owner": "Operations",
+    "dueDate": "2026-08-15",
+    "status": "Open",
+    "evidence": "Agent record check"
+  },
+  {
+    "name": "Insurance Renewal Review",
+    "category": "Continuity",
+    "owner": "Finance",
+    "dueDate": "2026-09-01",
+    "status": "Open",
+    "evidence": "Policy declaration"
+  },
+  {
+    "name": "Quarterly Expense Reconciliation",
+    "category": "Finance",
+    "owner": "Operations",
+    "dueDate": "2026-09-30",
+    "status": "In Progress",
+    "evidence": "Expense summary"
+  }
+]
