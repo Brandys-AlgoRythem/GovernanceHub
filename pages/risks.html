@@ -33,15 +33,15 @@
         <div>
           <p class="eyebrow">Risk register</p>
           <h1>Risk management</h1>
-          <p>Static risk register for identifying, categorizing, and tracking mitigation status before V2 logic.</p>
+          <p>Identify, categorize, and track mitigation status. Version 2 will load these from JSON.</p>
         </div>
-        <span class="badge badge-warning">4 open</span>
+        <span id="risks-badge" class="badge badge-warning">4 open</span>
       </header>
       <section class="card-grid">
-        <article class="metric-card"><strong>4</strong><span>Open risks</span></article>
-        <article class="metric-card"><strong>3</strong><span>Mitigated</span></article>
-        <article class="metric-card"><strong>2</strong><span>High impact</span></article>
-        <article class="metric-card"><strong>8</strong><span>Total risks</span></article>
+        <article class="metric-card"><strong id="risks-open">0</strong><span>Open risks</span></article>
+        <article class="metric-card"><strong id="risks-mitigated">0</strong><span>Mitigated</span></article>
+        <article class="metric-card"><strong id="risks-high">0</strong><span>High impact</span></article>
+        <article class="metric-card"><strong id="risks-total">0</strong><span>Total risks</span></article>
       </section>
       <section class="section-stack">
         <div class="table-wrap">
@@ -50,16 +50,14 @@
             <thead>
               <tr><th>ID</th><th>Risk</th><th>Category</th><th>Likelihood</th><th>Impact</th><th>Owner</th><th>Status</th></tr>
             </thead>
-            <tbody>
-              <tr><td><strong>RISK-001</strong></td><td>No backup signer assigned</td><td>Operational</td><td>Low</td><td>High</td><td>Compliance</td><td><span class="badge badge-warning">Open</span></td></tr>
-              <tr><td><strong>RISK-002</strong></td><td>Missing quarterly evidence review</td><td>Compliance</td><td>Medium</td><td>Medium</td><td>Operations</td><td><span class="badge badge-warning">Open</span></td></tr>
-              <tr><td><strong>RISK-003</strong></td><td>Vendor contract renewal not tracked</td><td>Vendor</td><td>Low</td><td>Medium</td><td>Finance</td><td><span class="badge badge-success">Mitigated</span></td></tr>
-              <tr><td><strong>RISK-004</strong></td><td>Business continuity plan not tested</td><td>Continuity</td><td>High</td><td>High</td><td>Operations</td><td><span class="badge badge-neutral">Planned</span></td></tr>
+            <tbody id="risks-body">
+              <!-- Rendered by data.js -->
             </tbody>
           </table>
         </div>
       </section>
     </main>
   </div>
+  <script src="../scripts/data.js"></script>
 </body>
 </html>
