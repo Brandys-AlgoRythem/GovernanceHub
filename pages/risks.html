@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risks | Governance Hub</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/cards.css">
+  <link rel="stylesheet" href="../styles/badges.css">
+  <link rel="stylesheet" href="../styles/tables.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="sidebar-title" href="../index.html">Governance Hub</a>
+      <nav class="nav-list" aria-label="Primary navigation">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="business-profile.html">Business Profile</a>
+        <a class="nav-link" href="obligations.html">Obligations</a>
+        <a class="nav-link" href="vault.html">Governance Vault</a>
+        <a class="nav-link is-active" href="risks.html">Risks</a>
+        <a class="nav-link" href="controls.html">Controls</a>
+        <a class="nav-link" href="evidence.html">Evidence</a>
+        <a class="nav-link" href="expenses.html">Expenses</a>
+        <a class="nav-link" href="roadmap.html">Roadmap</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Risk register</p>
+          <h1>Risk management</h1>
+          <p>Static risk register for identifying, categorizing, and tracking mitigation status before V2 logic.</p>
+        </div>
+        <span class="badge badge-warning">4 open</span>
+      </header>
+      <section class="card-grid">
+        <article class="metric-card"><strong>4</strong><span>Open risks</span></article>
+        <article class="metric-card"><strong>3</strong><span>Mitigated</span></article>
+        <article class="metric-card"><strong>2</strong><span>High impact</span></article>
+        <article class="metric-card"><strong>8</strong><span>Total risks</span></article>
+      </section>
+      <section class="section-stack">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Risk register</caption>
+            <thead>
+              <tr><th>ID</th><th>Risk</th><th>Category</th><th>Likelihood</th><th>Impact</th><th>Owner</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>RISK-001</strong></td><td>No backup signer assigned</td><td>Operational</td><td>Low</td><td>High</td><td>Compliance</td><td><span class="badge badge-warning">Open</span></td></tr>
+              <tr><td><strong>RISK-002</strong></td><td>Missing quarterly evidence review</td><td>Compliance</td><td>Medium</td><td>Medium</td><td>Operations</td><td><span class="badge badge-warning">Open</span></td></tr>
+              <tr><td><strong>RISK-003</strong></td><td>Vendor contract renewal not tracked</td><td>Vendor</td><td>Low</td><td>Medium</td><td>Finance</td><td><span class="badge badge-success">Mitigated</span></td></tr>
+              <tr><td><strong>RISK-004</strong></td><td>Business continuity plan not tested</td><td>Continuity</td><td>High</td><td>High</td><td>Operations</td><td><span class="badge badge-neutral">Planned</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
