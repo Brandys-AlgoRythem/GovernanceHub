@@ -1,0 +1,41 @@
+{
+  "entityName": "SyNERDgy LLC",
+  "entityType": "Limited Liability Company",
+  "state": "Kentucky",
+  "formationStatus": "Active",
+  "registeredAgent": "Brandy",
+  "operatingAgreement": "Uploaded",
+  "einConfirmation": "Stored",
+  "locations": [
+    {
+      "type": "Principal Office",
+      "city": "Lexington",
+      "state": "KY",
+      "status": "Current"
+    }
+  ],
+  "owners": [
+    {
+      "name": "Brandy",
+      "role": "Founder / COO",
+      "governanceArea": "Operations, records, compliance workflow"
+    },
+    {
+      "name": "Nate",
+      "role": "Managing Member",
+      "governanceArea": "Executive approval and business continuity"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Registered Agent",
+      "owner": "Brandy",
+      "status": "Active"
+    },
+    {
+      "name": "Business Banking Contact",
+      "owner": "Operations",
+      "status": "Pending"
+    }
+  ]
+}
