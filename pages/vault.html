@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="../styles/tokens.css">
   <link rel="stylesheet" href="../styles/base.css">
   <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/cards.css">
+  <link rel="stylesheet" href="../styles/badges.css">
+  <link rel="stylesheet" href="../styles/tables.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
   <div class="app-shell">
@@ -26,13 +30,32 @@
         <div>
           <p class="eyebrow">Governance vault</p>
           <h1>Document inventory</h1>
-          <p>Starter page for document categories, storage locations, review dates, versions, missing records, and evidence links.</p>
+          <p>Static vault view for document categories, storage locations, review dates, versions, missing records, and evidence links.</p>
         </div>
+        <span class="badge badge-danger">2 missing</span>
       </header>
       <section class="card-grid">
         <article class="metric-card"><strong>24</strong><span>Tracked documents</span></article>
         <article class="metric-card"><strong>18</strong><span>Verified</span></article>
-        <article class="metric-card"><strong>2</strong><span>Missing</span></article>
+        <article class="metric-card"><strong>4</strong><span>Pending review</span></article>
+        <article class="metric-card"><strong>2</strong><span>Missing records</span></article>
+      </section>
+      <section class="section-stack">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Document readiness inventory</caption>
+            <thead>
+              <tr><th>Document</th><th>Category</th><th>Version</th><th>Owner</th><th>Status</th><th>Linked item</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Operating Agreement</strong></td><td>Corporate</td><td>v1.0</td><td>Owner</td><td><span class="badge badge-success">Verified</span></td><td>Business Profile</td></tr>
+              <tr><td><strong>EIN Confirmation</strong></td><td>Tax</td><td>Original</td><td>Finance</td><td><span class="badge badge-success">Stored</span></td><td>Entity record</td></tr>
+              <tr><td><strong>Annual Report Receipt</strong></td><td>Filing</td><td>2026</td><td>Compliance</td><td><span class="badge badge-warning">Review</span></td><td>Annual Report</td></tr>
+              <tr><td><strong>Cyber Insurance Policy</strong></td><td>Insurance</td><td>2026</td><td>Operations</td><td><span class="badge badge-success">Active</span></td><td>Continuity</td></tr>
+              <tr><td><strong>Vendor Contract Template</strong></td><td>Contracts</td><td>Draft</td><td>Operations</td><td><span class="badge badge-danger">Missing proof</span></td><td>Vendor risk</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   </div>
