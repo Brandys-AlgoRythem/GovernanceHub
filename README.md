@@ -1,20 +1,20 @@
 # Governance Hub
 
-Governance Hub is a local-first business GRC workspace for organizing obligations, evidence, risk, controls, documents, licenses, expenses, vendors, and governance readiness from one executive dashboard.
+Governance Hub is a corporate hive workspace for organizing governance, risk, compliance, evidence, controls, records, vendors, expenses, and readiness signals from one executive dashboard.
 
-It is built as a working portfolio app with sample data. A reviewer can enter a sample business profile, save it locally in the browser, open the workspace, and see how a comprehensive business governance system would be structured.
+It is built as a working portfolio app with sample data. A reviewer can open the workspace and see how a comprehensive corporate GRC system could be structured, navigated, validated, and expanded.
 
-The app uses static HTML, CSS, JavaScript, local JSON, and browser storage so it can run on GitHub Pages without a backend, database, authentication layer, or build step.
+The app uses static HTML, CSS, JavaScript, local JSON, and browser-safe sample data so it can run on GitHub Pages without a backend, database, authentication layer, or build step.
 
 ## Why This Exists
 
-Small businesses often manage governance through scattered files, inbox searches, memory, text threads, and spreadsheets that become haunted once the business has more than one deadline.
+Small organizations often manage governance through scattered files, inbox searches, memory, text threads, and spreadsheets that become haunted once there is more than one deadline.
 
 Governance Hub models a cleaner operating system:
 
-1. Capture the business foundation.
+1. Capture the workspace foundation.
 2. Track obligations and renewal dates.
-3. Store governance documents.
+3. Store governance records.
 4. Map evidence to requirements.
 5. Track risks and controls.
 6. Monitor vendors, expenses, and dependencies.
@@ -22,38 +22,28 @@ Governance Hub models a cleaner operating system:
 
 ## Current Version
 
-Current version: **Version 2 Working Sample Workspace**
+Current version: **Version 2 Corporate Hive Workspace**
 
-Version 2 keeps the app static and local-first while adding JSON-fed tables, calculated dashboard metrics, stable due-date logic, quick filters, search, category filtering, status filtering, recent activity hydration, local sample workspace inputs, and validation checks.
+Version 2 keeps the app static and local-first while adding JSON-fed tables, calculated dashboard metrics, stable due-date logic, quick filters, search, category filtering, status filtering, recent activity hydration, and validation checks.
 
 ## Core Modules
 
 - Executive Dashboard
-- Business Profile
+- Workspace Profile
 - Obligations Tracker
 - Governance Vault
 - Licenses and Permits
 - Risk Register
 - Controls / SOP Library
 - Evidence Tracker
-- Business Expenses
+- Expenses
 - Governance Intelligence Roadmap
 
-## Working Workspace Behavior
+## Corporate Hive Coverage
 
-The landing page includes a workspace setup form.
+Governance Hub is organized around the major areas a corporate GRC workspace needs:
 
-A reviewer can enter sample business details such as business name, entity type, state, workspace owner, primary GRC focus, and review cadence.
-
-Those values are saved in browser storage and reflected in the workspace dashboard.
-
-This makes the project feel like a working local-first business GRC app while still using safe sample data.
-
-## Comprehensive Business GRC Coverage
-
-Governance Hub is organized around the major areas a business GRC workspace needs:
-
-- Business foundation
+- Workspace foundation
 - Ownership and roles
 - Obligations and renewals
 - Governance records
@@ -128,8 +118,6 @@ The data is sample data, but the structure is meaningful. Records use IDs, owner
 
 Current interactive pieces:
 
-- Local workspace setup form
-- Browser-saved sample business profile
 - Local JSON loader
 - Stable due-date logic
 - Calculated dashboard metrics
@@ -141,6 +129,7 @@ Current interactive pieces:
 - Category filters
 - Status filters
 - License data model
+- Shared corporate hive chrome cleanup
 - Data validation script
 - Validation GitHub Action
 
@@ -177,7 +166,7 @@ http://localhost:8000
 ## Suggested Review Path
 
 ```txt
-Landing Page → Workspace Setup → Dashboard → Obligations → Vault → Licenses → Risks → Controls → Evidence → Expenses → Roadmap
+Landing Page → Dashboard → Workspace Profile → Obligations → Vault → Licenses → Risks → Controls → Evidence → Expenses → Roadmap
 ```
 
 ## GitHub Pages
@@ -195,7 +184,7 @@ Configure GitHub Pages to use GitHub Actions for deployment.
 - Audit readiness modeling
 - Governance operations
 - Executive reporting
-- Business process modeling
+- Process modeling
 - Information architecture
 - Local-first product thinking
 - Frontend prototyping
@@ -209,6 +198,6 @@ Configure GitHub Pages to use GitHub Actions for deployment.
 
 Governance Hub is a working portfolio app with sample data.
 
-It is designed to show how a comprehensive business GRC workspace can be structured, navigated, validated, and expanded.
+It is designed to show how a comprehensive corporate GRC workspace can be structured, navigated, validated, and expanded.
 
 It is not a production compliance platform and does not provide legal, tax, financial, or compliance advice.
