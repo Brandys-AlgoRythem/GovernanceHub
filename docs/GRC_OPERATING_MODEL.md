@@ -1,50 +1,45 @@
 # Governance Hub GRC Operating Model
 
-Governance Hub is a local-first business GRC workspace built with sample data.
+Governance Hub is a local-first corporate GRC workspace built with sample data.
 
-A reviewer can enter a starter business profile, open the workspace, and see how the system organizes governance work.
+A reviewer can open the workspace and see how the system organizes governance, risk, compliance, evidence, records, controls, vendors, expenses, continuity, and readiness.
 
 ## Core Operating Areas
 
-Governance Hub is organized around the core areas a business GRC workspace needs:
+Governance Hub is organized around the core areas a corporate GRC workspace needs:
 
-- Business foundation
+- Governance foundation
 - Ownership and roles
-- Obligations and renewals
+- Compliance obligations and renewals
 - Governance records
-- Licenses and permits
-- Risk register
-- Controls and SOPs
-- Evidence tracker
-- Expense support
+- License and permit management
+- Enterprise risk register
+- Control library
+- Evidence and audit readiness
+- Expense evidence
 - Vendor dependencies
 - Continuity review
-- Audit readiness
 - Executive reporting
-
-## Workspace Behavior
-
-The landing page allows a reviewer to enter sample business information and save it locally in the browser.
-
-That starter profile data can be reflected inside the app so the experience feels like a working business GRC workspace.
 
 ## Module Coverage
 
-Business Profile captures entity identity, workspace ownership, location, formation records, and operating cadence.
+Executive Overview summarizes governance health, compliance deadlines, open risks, evidence readiness, documents, expenses, and recent GRC activity.
 
-Obligations tracks filings, reviews, renewals, owners, due dates, priorities, and required evidence.
+Governance Profile captures the workspace model, ownership roles, contacts, locations, foundation records, and operating cadence.
 
-Governance Vault organizes formation records, policies, licenses, contracts, confirmations, storage locations, and review dates.
+Compliance Calendar tracks filings, reviews, renewals, owners, due dates, priorities, jurisdictions, and required evidence.
 
-Licenses and Permits tracks license inventory, jurisdictions, expiration dates, renewal status, owners, and linked proof.
+Governance Records Vault organizes formation records, policies, licenses, contracts, confirmations, storage locations, and review dates.
 
-Risk Register connects risks to categories, likelihood, impact, mitigation, owners, residual risk, and status.
+License & Permit Register tracks license inventory, jurisdictions, expiration dates, renewal status, owners, and linked proof.
 
-Controls and SOPs define repeatable activities, owners, cadence, evidence requirements, mapped risks, and mapped obligations.
+Enterprise Risk Register connects risks to categories, likelihood, impact, mitigation, owners, residual risk, and status.
 
-Evidence Tracker maps proof records to obligations, controls, expenses, documents, risks, and licenses.
+Control Library defines repeatable activities, owners, cadence, evidence requirements, mapped risks, and mapped obligations.
 
-Expenses tracks business spend, vendors, categories, amounts, receipt status, quarters, and support records.
+Evidence & Audit Readiness maps proof records to obligations, controls, expenses, documents, risks, and licenses.
+
+Expense Evidence tracks spend, vendors, categories, amounts, receipt status, quarters, and support records.
 
 Vendor awareness connects outside dependencies to expenses, risks, owners, review dates, and status.
 
@@ -54,6 +49,6 @@ Continuity and audit readiness combine health scoring, upcoming deadlines, missi
 
 Governance Hub should be presented as a working local-first portfolio app with sample data.
 
-It should show how a comprehensive business GRC system could be structured, navigated, validated, and expanded.
+It should show how a comprehensive corporate GRC system could be structured, navigated, validated, and expanded.
 
 It should not claim to be a production compliance platform.
