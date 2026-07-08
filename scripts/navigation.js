@@ -34,6 +34,11 @@ function polishHiveChrome() {
   document.querySelectorAll('.profile-hex').forEach((node) => {
     if (node.textContent.trim() === 'B') node.textContent = 'GH';
   });
+  document.querySelectorAll('.badge').forEach((node) => {
+    const label = node.textContent.trim();
+    if (label === 'JSON Driven') node.textContent = 'Data View';
+    if (label === 'JSON') node.textContent = 'Activity';
+  });
 }
 
 polishHiveChrome();
