@@ -48,6 +48,8 @@
     }
   ],
   "summaryMetrics": {
+    "monthlyRevenue": 4200,
+    "monthlyRevenueTarget": 5000,
     "upcomingDeadlines": 3,
     "actionItems": 2,
     "continuityRisk": 1,
