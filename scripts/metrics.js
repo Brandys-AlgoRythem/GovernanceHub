@@ -6,6 +6,11 @@ function sumBy(items, picker) {
   return items.reduce((total, item) => total + Number(picker(item) || 0), 0);
 }
 
+function percentOf(value, total) {
+  if (!total) return 0;
+  return Math.max(0, Math.min(100, Math.round((value / total) * 100)));
+}
+
 function obligationStatus(item) {
   return window.GovernanceDates.getDueStatus(item.dueDate, item.status === 'Completed');
 }
@@ -43,6 +48,7 @@ function latestExpenseDate(expenses) {
 }
 
 function calculateDashboardMetrics(data) {
+  const business = data.business || {};
   const obligations = data.obligations || [];
   const risks = data.risks || [];
   const documents = data.documents || [];
@@ -68,6 +74,15 @@ function calculateDashboardMetrics(data) {
     return date.getMonth() === latestMonth ? expense.amount : 0;
   });
   const quarterlyExpenses = sumBy(expenses, (expense) => expense.quarter === latestQuarter ? expense.amount : 0);
+  const subscriptionCount = countBy(expenses, (expense) => expense.frequency === 'Monthly');
+  const subscriptionSpend = sumBy(expenses, (expense) => expense.frequency === 'Monthly' ? expense.amount : 0);
+  const monthlyRevenue = Number(business.summaryMetrics?.monthlyRevenue || 0);
+  const monthlyRevenueTarget = Number(business.summaryMetrics?.monthlyRevenueTarget || monthlyRevenue || 1);
+  const netProfit = monthlyRevenue - monthlyExpenses;
+  const revenueProgress = percentOf(monthlyRevenue, monthlyRevenueTarget);
+  const expenseRatio = percentOf(monthlyExpenses, monthlyRevenue);
+  const profitMargin = percentOf(netProfit, monthlyRevenue);
+  const subscriptionRatio = Math.min(100, subscriptionCount * 20);
 
   const documentScore = calculateDocumentScore(documents);
   const obligationScore = calculateObligationScore(obligations);
@@ -85,8 +100,17 @@ function calculateDashboardMetrics(data) {
     verifiedEvidence,
     missingEvidence,
     controlsCount,
+    monthlyRevenue,
+    monthlyRevenueTarget,
     monthlyExpenses,
     quarterlyExpenses,
+    netProfit,
+    subscriptionCount,
+    subscriptionSpend,
+    revenueProgress,
+    expenseRatio,
+    profitMargin,
+    subscriptionRatio,
     documentScore,
     obligationScore,
     evidenceScore,
