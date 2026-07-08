@@ -24,6 +24,7 @@
 
   .module-grid,
   .metric-grid,
+  .business-kpi-grid,
   .status-grid,
   .license-grid,
   .roadmap-grid,
@@ -56,6 +57,7 @@
   .module-grid,
   .metric-grid,
   .metric-grid.compact,
+  .business-kpi-grid,
   .detail-grid,
   .card-grid.two,
   .card-grid.three,
