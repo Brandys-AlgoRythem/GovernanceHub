@@ -1,33 +1,33 @@
 {
   "id": "BUS-001",
-  "entityName": "Corporate Hive",
-  "entityType": "Governance Workspace",
-  "state": "Operating Region",
+  "entityName": "Business LLC",
+  "entityType": "Limited Liability Company",
+  "state": "State Business Registry",
   "formationStatus": "Active",
-  "registeredAgent": "Corporate Services Team",
+  "registeredAgent": "Registered Agent Service",
   "operatingAgreement": "DOC-001",
   "registrationConfirmation": "DOC-002",
   "primaryDashboard": "pages/dashboard.html",
   "locations": [
     {
       "id": "LOC-001",
-      "type": "Primary Workspace",
-      "city": "Corporate Hive",
-      "state": "Operating Region",
+      "type": "Principal Office",
+      "city": "Business City",
+      "state": "State Business Registry",
       "status": "Current"
     }
   ],
   "owners": [
     {
       "id": "OWN-001",
-      "name": "Governance Team",
-      "role": "Workspace Owner",
+      "name": "John Doe",
+      "role": "Governance Owner",
       "governanceArea": "Operations, records, compliance workflow",
       "linkedControls": ["CTRL-001", "CTRL-004"]
     },
     {
       "id": "OWN-002",
-      "name": "Executive Sponsor",
+      "name": "Jane Smith",
       "role": "Continuity Owner",
       "governanceArea": "Executive approval and continuity",
       "linkedControls": ["CTRL-002", "CTRL-005"]
@@ -36,8 +36,8 @@
   "contacts": [
     {
       "id": "CON-001",
-      "name": "Corporate Services Contact",
-      "owner": "Corporate Services Team",
+      "name": "Registered Agent Contact",
+      "owner": "Registered Agent Service",
       "status": "Active"
     },
     {
