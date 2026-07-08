@@ -1,13 +1,25 @@
 const navLinks = document.querySelectorAll('[data-nav]');
 const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
+const navLabelMap = {
+  'dashboard.html': 'Executive Overview',
+  'business-profile.html': 'Governance Profile',
+  'obligations.html': 'Compliance Calendar',
+  'vault.html': 'Governance Records Vault',
+  'licenses.html': 'License & Permit Register',
+  'risks.html': 'Enterprise Risk Register',
+  'controls.html': 'Control Library',
+  'evidence.html': 'Evidence & Audit Readiness',
+  'expenses.html': 'Expense Evidence',
+  'roadmap.html': 'GRC Roadmap'
+};
+
 navLinks.forEach((link) => {
   const href = link.getAttribute('href');
   if (!href) return;
   const linkPath = href.split('/').pop();
-  if (linkPath === currentPath) {
-    link.classList.add('active');
-  }
+  if (navLabelMap[linkPath]) link.textContent = navLabelMap[linkPath];
+  if (linkPath === currentPath) link.classList.add('active');
 });
 
 function polishHiveChrome() {
