@@ -10,7 +10,7 @@ const navLabelMap = {
   'risks.html': 'Enterprise Risk Register',
   'controls.html': 'Control Library',
   'evidence.html': 'Evidence & Audit Readiness',
-  'expenses.html': 'Expense Evidence',
+  'expenses.html': 'Business Expenses',
   'roadmap.html': 'GRC Roadmap'
 };
 
