@@ -2,35 +2,33 @@
 
 ## Problem
 
-Small businesses often manage governance through scattered documents, inbox searches, text threads, memory, and spreadsheets.
+Organizations often manage governance through scattered documents, inbox searches, text threads, memory, and spreadsheets.
 
 That creates operational risk. Records can be misplaced, renewal proof can go stale, ownership can become unclear, and audit readiness can depend on one person remembering where everything lives.
 
-Governance Hub organizes those moving pieces into one local-first business GRC workspace.
+Governance Hub organizes those moving pieces into one local-first corporate GRC workspace.
 
 ## Product Hypothesis
 
-A lightweight business GRC workspace can help small businesses understand what exists, what is due, what proof is missing, and which risks need attention without requiring a full enterprise platform.
+A lightweight corporate GRC workspace can help organizations understand what exists, what is due, what proof is missing, and which risks need attention without requiring a full enterprise platform.
 
-The app uses sample data and local starter profile inputs so a reviewer can see how the system works without accounts, paid APIs, or a backend.
+The app uses sample data so a reviewer can see how the system works without accounts, paid APIs, or a backend.
 
 ## Target User
 
-The target user is a small business owner, operator, compliance coordinator, or governance-focused consultant supporting a small organization.
-
-The intended business size is roughly 1 to 15 employees.
+The target user is a small business owner, operator, compliance coordinator, GRC analyst, or governance-focused consultant supporting a growing organization.
 
 ## GRC Concepts Modeled
 
-- Business identity and entity records
+- Governance foundation
 - Ownership and role mapping
-- Obligation tracking
+- Compliance calendar design
 - License and renewal management
 - Evidence collection
 - Document readiness
-- Risk register design
+- Enterprise risk register design
 - Control and SOP mapping
-- Expense support records
+- Expense evidence support
 - Vendor and dependency awareness
 - Continuity review
 - Executive reporting
@@ -40,23 +38,23 @@ The intended business size is roughly 1 to 15 employees.
 
 The app separates the governance operating model into focused pages:
 
-- Landing Page and Workspace Setup
-- Executive Dashboard
-- Business Profile
-- Obligations Tracker
-- Governance Vault
-- Licenses and Permits
-- Risk Register
-- Controls / SOP Library
-- Evidence Tracker
-- Business Expenses
-- Governance Intelligence Roadmap
+- Landing Page
+- Executive Overview
+- Governance Profile
+- Compliance Calendar
+- Governance Records Vault
+- License & Permit Register
+- Enterprise Risk Register
+- Control Library
+- Evidence & Audit Readiness
+- Expense Evidence
+- GRC Roadmap
 
 ## Working Workspace Behavior
 
-The landing page includes a workspace setup form.
+The landing page explains what the workspace includes and why the operating model matters.
 
-A reviewer can enter sample business details, save them locally in the browser, and see those values reflected in the dashboard.
+A reviewer can open the executive overview and move through each GRC module without creating an account or using private data.
 
 This gives the app a working feel while keeping the data safe, local, and sample-based.
 
@@ -70,12 +68,10 @@ Records use IDs and relationship fields so the workspace can model how governanc
 
 ## Build Logic
 
-The build uses static HTML, CSS, JavaScript, local JSON, and browser storage.
+The build uses static HTML, CSS, JavaScript, local JSON, and GitHub Pages.
 
 Current features include:
 
-- Local workspace setup form
-- Browser-saved sample business profile
 - Local JSON loader
 - Stable due-date logic
 - Calculated dashboard metrics
@@ -87,6 +83,7 @@ Current features include:
 - Status filters
 - License data model
 - Recent activity hydration
+- Corporate hive danger-scale signal map
 - Data validation script
 - Validation GitHub Action
 - Screenshot-free README strategy
@@ -95,7 +92,7 @@ Current features include:
 
 Governance Hub intentionally avoids backend systems, authentication, databases, paid APIs, and complex build tooling.
 
-That keeps the app easy to inspect, easy to deploy, and easy to explain in a portfolio review. The tradeoff is that it does not persist full records beyond the local starter profile values.
+That keeps the app easy to inspect, easy to deploy, and easy to explain in a portfolio review.
 
 This is acceptable because the project is designed as a working portfolio app with sample data, not as a production compliance platform.
 
@@ -123,4 +120,4 @@ Future work could include relationship highlighting, full editable local records
 
 Governance Hub should be reviewed as a product-thinking and GRC-operations artifact.
 
-It shows how a small business governance system could be organized, how its records could relate, how a user could enter sample workspace details, and how a future operational platform could grow from a local-first build.
+It shows how a corporate governance system could be organized, how its records could relate, how a reviewer could navigate the workspace, and how a future operational platform could grow from a local-first build.
