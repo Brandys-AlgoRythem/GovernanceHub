@@ -1,3 +1,9 @@
+@media (max-width: 1180px) {
+  .signal-hive {
+    grid-template-columns: repeat(3, minmax(145px, 1fr));
+  }
+}
+
 @media (max-width: 1000px) {
   .hero-section,
   .split-section,
@@ -24,6 +30,10 @@
   .card-grid.three {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .signal-hive {
+    grid-template-columns: repeat(2, minmax(145px, 1fr));
+  }
 }
 
 @media (max-width: 680px) {
@@ -32,7 +42,8 @@
   .page-heading,
   .site-footer,
   .panel-header,
-  .card-header {
+  .card-header,
+  .signal-intro {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -52,8 +63,14 @@
   .license-grid,
   .roadmap-grid,
   .sidebar-nav,
-  .hive-map {
+  .hive-map,
+  .signal-hive {
     grid-template-columns: 1fr;
+  }
+
+  .signal-cell {
+    min-height: 124px;
+    clip-path: polygon(12% 0%, 88% 0%, 100% 50%, 88% 100%, 12% 100%, 0% 50%);
   }
 
   .timeline-list li {
