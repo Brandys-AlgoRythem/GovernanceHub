@@ -24,10 +24,12 @@ navLinks.forEach((link) => {
 
 function polishHiveChrome() {
   document.querySelectorAll('.brand-mark small').forEach((node) => {
-    node.textContent = 'Corporate Hive Workspace';
+    node.textContent = 'Corporate GRC Workspace';
   });
   document.querySelectorAll('.header-copy span').forEach((node) => {
-    if (node.textContent.trim() === 'Welcome back, King.') node.textContent = 'Hive Operations';
+    if (node.textContent.trim() === 'Welcome back, King.' || node.textContent.trim() === 'Hive Operations') {
+      node.textContent = 'GRC Operations';
+    }
   });
   document.querySelectorAll('.profile-hex').forEach((node) => {
     if (node.textContent.trim() === 'B') node.textContent = 'GH';
