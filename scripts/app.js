@@ -7,7 +7,9 @@ function setYear() {
 
 function formatMetricValue(key, value) {
   if (key === 'healthScore' || key.endsWith('Score')) return `${value}%`;
-  if (key === 'monthlyExpenses' || key === 'quarterlyExpenses') return `$${Math.round(value).toLocaleString()}`;
+  if (['monthlyRevenue', 'monthlyExpenses', 'quarterlyExpenses', 'netProfit', 'subscriptionSpend'].includes(key)) {
+    return `$${Math.round(value).toLocaleString()}`;
+  }
   return value;
 }
 
@@ -17,6 +19,20 @@ function updateDashboardMetricCards(metrics) {
     const strong = card.querySelector('strong');
     if (!key || !strong || metrics[key] === undefined) return;
     strong.textContent = formatMetricValue(key, metrics[key]);
+  });
+}
+
+function updateDashboardKpiBars(metrics) {
+  document.querySelectorAll('[data-kpi-fill]').forEach((card) => {
+    const key = card.dataset.kpiFill;
+    const value = Math.max(0, Math.min(100, Number(metrics[key] || 0)));
+    card.style.setProperty('--kpi-width', `${value}%`);
+  });
+
+  document.querySelectorAll('[data-kpi-note-value]').forEach((node) => {
+    const key = node.dataset.kpiNoteValue;
+    if (metrics[key] === undefined) return;
+    node.textContent = key === 'subscriptionSpend' ? `$${Math.round(metrics[key]).toLocaleString()}` : `${metrics[key]}%`;
   });
 }
 
@@ -80,6 +96,7 @@ async function initializeGovernanceHub() {
     if (window.GovernanceMetrics && window.location.pathname.endsWith('dashboard.html')) {
       const metrics = window.GovernanceMetrics.calculateDashboardMetrics(data);
       updateDashboardMetricCards(metrics);
+      updateDashboardKpiBars(metrics);
       updateDashboardHealth(metrics);
       renderDashboardDeadlines(data.obligations || []);
     }
@@ -89,7 +106,7 @@ async function initializeGovernanceHub() {
       if (type) window.GovernanceTables.renderDynamicTable(type, data);
     }
   } catch (error) {
-    console.warn('Governance Hub demo data did not load:', error);
+    console.warn('Governance Hub data did not load:', error);
   }
 }
 
